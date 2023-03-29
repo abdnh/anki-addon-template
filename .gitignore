@@ -1,0 +1,11 @@
+__pycache__/
+venv/
+.mypy_cache/
+ankidata/
+build/
+src/manifest.json
+src/meta.json
+src/forms/
+src/user_files/*/
+src/vendor/
+TODO.md

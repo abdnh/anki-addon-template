@@ -1,0 +1,13 @@
+[MASTER]
+extension-pkg-whitelist=PyQt6,PyQt5
+ignore = venv|ankidata|vendor|forms
+
+[REPORTS]
+output-format=colorized
+
+[MESSAGES CONTROL]
+
+[BASIC]
+good-names =
+  i,
+  mw,

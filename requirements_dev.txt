@@ -1,0 +1,6 @@
+aqt
+mypy
+pylint
+black
+isort
+ankibuild[qt5,qt6] @ git+https://github.com/abdnh/ankibuild

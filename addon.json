@@ -1,0 +1,7 @@
+{
+    "name": "Add-on Name",
+    "package": "addon_name",
+    "homepage": "https://github.com/abdnh/anki-addon-template",
+    "ankiweb_id": "1",
+    "min_point_version": 45
+}
