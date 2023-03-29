@@ -1,4 +1,6 @@
-My Anki add-on template. See [ankibuild](https://github.com/abdnh/ankibuild) for some description of the file structure.
+# Anki Add-on Template
+
+Anki add-on template for my projects. See [ankibuild](https://github.com/abdnh/ankibuild) for some description of the file structure.
 
 ## Changelog
 
