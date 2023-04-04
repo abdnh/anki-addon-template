@@ -3,4 +3,4 @@ mypy
 pylint
 black
 isort
-ankibuild[qt5,qt6] @ git+https://github.com/abdnh/ankibuild
+ankibuild[qt5,qt6] @ git+https://github.com/abdnh/ankibuild@46fbbd25045c2c5abcd106b3a5715e63f922b4fe
