@@ -27,5 +27,6 @@ disable=
   redefined-outer-name,
   global-statement,
   protected-access,
+  arguments-renamed,
   consider-using-f-string,
   invalid-name
