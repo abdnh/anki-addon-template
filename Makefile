@@ -3,10 +3,10 @@
 all: zip ankiweb
 
 zip:
-	python -m ankibuild --type package --qt all --exclude user_files/**/
+	python -m ankiscripts.build --type package --qt all --exclude user_files/**/
 
 ankiweb:
-	python -m ankibuild --type ankiweb --qt all --exclude user_files/**/
+	python -m ankiscripts.build --type ankiweb --qt all --exclude user_files/**/
 
 fix:
 	python -m black src tests --exclude="forms|vendor"
