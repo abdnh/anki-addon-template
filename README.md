@@ -18,6 +18,8 @@ Anki add-on template for my projects.
 
 **_Below sections are what should be modified and included in the actual add-on's README.md._**
 
+[BEGINNING OF TEMPLATE]
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for a list of changes.
