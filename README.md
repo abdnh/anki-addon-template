@@ -7,7 +7,7 @@ Anki add-on template for my projects.
 -   Source files are in the [src](src) folder. The add-on zip contains all contents of this folder.
 -   Qt Designer files (if any) are in [designer](designer) folder. Generated Python forms are written to src/forms.
 -   An [addon.json](addon.json) file is used for metadata, similar to [Glutanimate's add-on builder](https://github.com/glutanimate/anki-addon-builder). [manifest.json](https://addon-docs.ankiweb.net/sharing.html#sharing-outside-ankiweb) is produced from this file.
--   My [ankibuild](https://github.com/abdnh/ankibuild) script is used to build the add-on and produce an [.ankiaddon](https://addon-docs.ankiweb.net/sharing.html#sharing-via-ankiweb) file.
+-   My [ankibuild](https://github.com/abdnh/ankiscripts) script is used to build the add-on and produce an [.ankiaddon](https://addon-docs.ankiweb.net/sharing.html#sharing-via-ankiweb) file.
 -   [pylint](.pylintrc), [mypy](mypy.ini), black, and [isort](.isort.cfg) are used for linting and formatting.
 -   Tests are in the [tests](tests) folder.
 -   a [Makefile](Makefile) is used to run build & lint commands.
