@@ -3,4 +3,4 @@ mypy
 pylint
 black
 isort
-ankiscripts[qt5,qt6] @ git+https://github.com/abdnh/ankiscripts@7b8df60e7d4c6be000ddd9b77a038c0b8323b5ae
+ankiscripts[qt5,qt6] @ git+https://github.com/abdnh/ankiscripts@05a9c65f154af5630e8e7871f0d3f8ded3325215
