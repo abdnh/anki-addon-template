@@ -4,7 +4,8 @@ on:
     create:
         tags:
             - "*"
-
+permissions:
+    contents: write
 jobs:
     create-release:
         name: Create Release
