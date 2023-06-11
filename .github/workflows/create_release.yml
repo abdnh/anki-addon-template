@@ -33,7 +33,7 @@ jobs:
               id: vars
               shell: bash
               run: |
-                  echo "::set-output name=changes::$(python .github/workflows/extract_changes.py ${{ github.ref }})"
+                  echo "changes=$(python .github/workflows/extract_changes.py ${{ github.ref }})" >> $GITHUB_OUTPUT
 
             - name: Release
               uses: softprops/action-gh-release@v1
