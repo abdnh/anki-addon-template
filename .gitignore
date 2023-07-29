@@ -7,6 +7,6 @@ src/manifest.json
 src/meta.json
 src/forms/
 src/user_files/*/
-src/vendor/
+vendor/
 node_modules/
 TODO.md
