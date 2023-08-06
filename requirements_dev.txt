@@ -3,4 +3,5 @@ mypy
 pylint
 black
 isort
+pre-commit
 ankiscripts[forms] @ git+https://github.com/abdnh/ankiscripts@3f34d93b61a2c989ba6f844f4382baaebe2547c8

@@ -1,10 +1,10 @@
 {
-    "editor.formatOnSave": true,
+    "[html]": {
+        "editor.formatOnSave": false
+    },
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     },
-    "python.formatting.provider": "black",
-    "[html]": {
-        "editor.formatOnSave": false
-    }
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black"
 }
