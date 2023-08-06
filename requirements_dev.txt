@@ -1,4 +1,4 @@
-aqt
+aqt[qt6]
 mypy
 pylint
 black
