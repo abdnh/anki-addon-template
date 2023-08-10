@@ -4,4 +4,4 @@ pylint
 black
 isort
 pre-commit
-ankiscripts[forms] @ git+https://github.com/abdnh/ankiscripts@dbe141d039dd85af8770d62d789f367a7ddb507a
+ankiscripts[forms] @ git+https://github.com/abdnh/ankiscripts@908d13f054dae024f6cac5f388c29ce357b7269b
