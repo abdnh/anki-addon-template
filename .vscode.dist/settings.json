@@ -2,9 +2,11 @@
     "[html]": {
         "editor.formatOnSave": false
     },
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "editor.formatOnSave": true,
-    "python.formatting.provider": "black"
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": false
+    },
+    "editor.formatOnSave": true
 }
