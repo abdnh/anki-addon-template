@@ -111,8 +111,9 @@ prompt-toolkit==3.0.36
     # via questionary
 protobuf==4.24.0
     # via anki
-psutil==5.9.5
+psutil==5.9.5 ; sys_platform == "win32"
     # via
+    #   -r requirements/dev.in
     #   anki
     #   aqt
 pylint==2.17.5
@@ -136,8 +137,10 @@ pyqt6-webengine-qt6==6.5.2
     # via pyqt6-webengine
 pysocks==1.7.1
     # via requests
-pywin32==306
-    # via aqt
+pywin32==306 ; sys_platform == "win32"
+    # via
+    #   -r requirements/dev.in
+    #   aqt
 pyyaml==6.0.1
     # via pre-commit
 questionary==2.0.0
