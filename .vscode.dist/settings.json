@@ -6,7 +6,7 @@
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "editor.codeActionsOnSave": {
-        "source.organizeImports": false
+        "source.organizeImports": true
     },
     "editor.formatOnSave": true
 }
