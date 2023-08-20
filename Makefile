@@ -1,4 +1,4 @@
-.PHONY: all zip ankiweb vendor fix mypy pylint clean
+.PHONY: all zip ankiweb vendor fix mypy pylint test clean
 
 all: zip ankiweb
 
@@ -20,6 +20,9 @@ mypy:
 
 pylint:
 	python -m pylint src tests
+
+test:
+	python -m  pytest --cov=src --cov-config=.coveragerc
 
 clean:
 	rm -rf build/

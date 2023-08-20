@@ -8,5 +8,7 @@ mypy
 pylint
 black
 isort
+pytest
+pytest-cov
 pre-commit
 ankiscripts[forms] @ https://github.com/abdnh/ankiscripts/archive/refs/heads/master.zip

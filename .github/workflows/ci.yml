@@ -30,4 +30,4 @@ jobs:
               run: SKIP=pip-compile pre-commit run --all-files
 
             - name: Run tests
-              run: python -m unittest
+              run: make test
