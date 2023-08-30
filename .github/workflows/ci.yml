@@ -26,6 +26,9 @@ jobs:
             - name: Install dependencies
               run: .github/workflows/install_deps.sh
 
+            - name: Build
+              run: make
+
             - name: Run checks
               run: SKIP=pip-compile pre-commit run --all-files
 
