@@ -8,6 +8,7 @@ mypy
 pylint
 black
 isort
+pyupgrade
 pytest
 pytest-cov
 pre-commit

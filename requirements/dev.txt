@@ -153,6 +153,8 @@ pytest==7.4.0
     #   pytest-cov
 pytest-cov==4.1.0
     # via -r requirements/dev.in
+pyupgrade==3.10.1
+    # via -r requirements/dev.in
 pywin32==306 ; sys_platform == "win32"
     # via
     #   -r requirements/dev.in
@@ -177,6 +179,8 @@ send2trash==1.8.2
     # via aqt
 soupsieve==2.4.1
     # via beautifulsoup4
+tokenize-rt==5.2.0
+    # via pyupgrade
 tomli==2.0.1
     # via
     #   black
