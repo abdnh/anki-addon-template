@@ -1,6 +1,6 @@
 anki==2.1.66
     # via aqt
-ankiscripts @ https://github.com/abdnh/ankiscripts/archive/refs/heads/master.zip
+ankiscripts @ https://github.com/abdnh/ankiscripts/archive/ec166df11d726172e6e633a6bd0ddeb4f624e63d.zip
     # via -r requirements/dev.in
 aqt==2.1.66
     # via -r requirements/dev.in
@@ -198,7 +198,7 @@ typing-extensions==4.7.1
     #   pylint
 urllib3==2.0.4
     # via requests
-virtualenv==20.24.3
+virtualenv==20.24.4
     # via pre-commit
 waitress==2.1.2
     # via aqt
