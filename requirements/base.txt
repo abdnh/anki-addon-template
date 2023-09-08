@@ -1,4 +1,4 @@
-build==1.0.0
+build==1.0.3
     # via pip-tools
 click==8.1.7
     # via pip-tools
@@ -27,5 +27,5 @@ zipp==3.16.2
 # The following packages are considered to be unsafe in a requirements file:
 pip==23.2.1
     # via pip-tools
-setuptools==68.1.2
+setuptools==68.2.0
     # via pip-tools

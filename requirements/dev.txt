@@ -1,6 +1,6 @@
 anki==2.1.66
     # via aqt
-ankiscripts @ https://github.com/abdnh/ankiscripts/archive/ec166df11d726172e6e633a6bd0ddeb4f624e63d.zip
+ankiscripts @ git+https://github.com/abdnh/ankiscripts@ec166df11d726172e6e633a6bd0ddeb4f624e63d
     # via -r requirements/dev.in
 ankiutils @ git+https://github.com/abdnh/ankiutils@c699f193f35dcd5d8995ddc78b22d03642927018
     # via -r requirements\bundle.in
@@ -20,7 +20,7 @@ black==23.7.0
     # via -r requirements/dev.in
 blinker==1.6.2
     # via flask
-build==1.0.0
+build==1.0.3
     # via pip-tools
 certifi==2023.7.22
     # via requests
@@ -39,7 +39,7 @@ colorama==0.4.6
     #   click
     #   pylint
     #   pytest
-coverage==7.3.0
+coverage==7.3.1
     # via pytest-cov
 decorator==5.1.1
     # via anki
@@ -100,7 +100,7 @@ mypy-extensions==1.0.0
     #   mypy
 nodeenv==1.8.0
     # via pre-commit
-orjson==3.9.5
+orjson==3.9.6
     # via anki
 packaging==23.1
     # via
@@ -122,7 +122,7 @@ pre-commit==3.4.0
     # via -r requirements/dev.in
 prompt-toolkit==3.0.36
     # via questionary
-protobuf==4.24.2
+protobuf==4.24.3
     # via anki
 psutil==5.9.5 ; sys_platform == "win32"
     # via
@@ -150,7 +150,7 @@ pyqt6-webengine-qt6==6.5.2
     # via pyqt6-webengine
 pysocks==1.7.1
     # via requests
-pytest==7.4.1
+pytest==7.4.2
     # via
     #   -r requirements/dev.in
     #   pytest-cov
@@ -174,7 +174,7 @@ requests==2.31.0
     # via
     #   anki
     #   aqt
-rpds-py==0.10.0
+rpds-py==0.10.2
     # via
     #   jsonschema
     #   referencing
@@ -223,7 +223,7 @@ zipp==3.16.2
 # The following packages are considered to be unsafe in a requirements file:
 pip==23.2.1
     # via pip-tools
-setuptools==68.1.2
+setuptools==68.2.0
     # via
     #   nodeenv
     #   pip-tools
