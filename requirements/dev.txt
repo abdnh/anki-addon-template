@@ -1,6 +1,6 @@
 anki==2.1.66
     # via aqt
-ankiscripts @ git+https://github.com/abdnh/ankiscripts@ec166df11d726172e6e633a6bd0ddeb4f624e63d
+ankiscripts @ git+https://github.com/abdnh/ankiscripts@1523f27088ff88cd0bca9cfb2ec9617eddc5e1e2
     # via -r requirements/dev.in
 ankiutils @ git+https://github.com/abdnh/ankiutils@c699f193f35dcd5d8995ddc78b22d03642927018
     # via -r requirements\bundle.in
@@ -16,7 +16,7 @@ beautifulsoup4==4.12.2
     # via
     #   anki
     #   aqt
-black==23.7.0
+black==23.9.0
     # via -r requirements/dev.in
 blinker==1.6.2
     # via flask
@@ -100,7 +100,7 @@ mypy-extensions==1.0.0
     #   mypy
 nodeenv==1.8.0
     # via pre-commit
-orjson==3.9.6
+orjson==3.9.7
     # via anki
 packaging==23.1
     # via
@@ -164,7 +164,7 @@ pywin32==306 ; sys_platform == "win32"
     #   aqt
 pyyaml==6.0.1
     # via pre-commit
-questionary==2.0.0
+questionary==2.0.1
     # via ankiscripts
 referencing==0.30.2
     # via
@@ -205,7 +205,7 @@ typing-extensions==4.7.1
     #   pylint
 urllib3==2.0.4
     # via requests
-virtualenv==20.24.4
+virtualenv==20.24.5
     # via pre-commit
 waitress==2.1.2
     # via aqt
