@@ -1,4 +1,4 @@
-.PHONY: all zip ankiweb vendor fix mypy pylint test clean
+.PHONY: all zip ankiweb vendor fix mypy pylint test sourcedist clean
 
 all: zip ankiweb
 
