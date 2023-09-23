@@ -1,2 +1,2 @@
-ankiutils @ git+https://github.com/abdnh/ankiutils@c699f193f35dcd5d8995ddc78b22d03642927018
+ankiutils @ git+https://github.com/abdnh/ankiutils@fc5f1e000cf99be6d25995c8f879a0d7f724e153
     # via -r requirements/bundle.in
