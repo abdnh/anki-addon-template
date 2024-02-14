@@ -29,7 +29,7 @@ See [CHANGELOG.md](CHANGELOG.md) for a list of changes.
 Please post any questions, bug reports, or feature requests in the [support page](https://forums.ankiweb.net/c/add-ons/11) or the [issue tracker](https://github.com/abdnh/anki-addon-template/issues).
 
 If you want priority support for your feature/help request, I'm available for hire.
-Get in touch via [email](mailto:abdo@abdnh.net) or the UpWork/Fiverr links below.
+Get in touch via [email](mailto:abdo@abdnh.net) or the UpWork link below.
 
 ## Support me
 
@@ -42,4 +42,3 @@ Consider supporting me if you like my work:
 I'm also available for freelance add-on development:
 
 <a href="https://www.upwork.com/freelancers/~01d764ac58a0eccc5c"><img height='36' src="https://i.imgur.com/z9lPvHb.png"></a>
-<a href="https://www.fiverr.com/abd_nh/develop-an-anki-addon"><img height='36' src="https://i.imgur.com/0meG4dk.png"></a>
