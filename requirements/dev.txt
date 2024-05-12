@@ -1,10 +1,10 @@
-anki==23.12.1
+anki==24.4.1
     # via aqt
 ankiscripts @ git+https://github.com/abdnh/ankiscripts@d93083b033509d1a6e5f0d8493e9b3aa03d15fba
     # via -r requirements/dev.in
 ankiutils @ git+https://github.com/abdnh/ankiutils@29652295f7e1d2aff55e000a66fbc239de8c6224
     # via -r requirements\bundle.in
-aqt==23.12.1
+aqt==24.4.1
     # via -r requirements/dev.in
 astroid==3.1.0
     # via pylint
@@ -16,11 +16,11 @@ beautifulsoup4==4.12.3
     # via
     #   anki
     #   aqt
-black==24.3.0
+black==24.4.2
     # via -r requirements/dev.in
-blinker==1.7.0
+blinker==1.8.2
     # via flask
-build==1.1.1
+build==1.2.1
     # via pip-tools
 certifi==2024.2.2
     # via requests
@@ -39,7 +39,7 @@ colorama==0.4.6
     #   click
     #   pylint
     #   pytest
-coverage==7.4.4
+coverage==7.5.1
     # via pytest-cov
 decorator==5.1.1
     # via anki
@@ -47,19 +47,19 @@ dill==0.3.8
     # via pylint
 distlib==0.3.8
     # via virtualenv
-exceptiongroup==1.2.0
+exceptiongroup==1.2.1
     # via pytest
-filelock==3.13.1
+filelock==3.14.0
     # via virtualenv
-flask==3.0.2
+flask==3.0.3
     # via
     #   aqt
     #   flask-cors
-flask-cors==4.0.0
+flask-cors==4.0.1
     # via aqt
-identify==2.5.35
+identify==2.5.36
     # via pre-commit
-idna==3.6
+idna==3.7
     # via requests
 importlib-metadata==7.1.0
     # via
@@ -72,11 +72,11 @@ isort==5.13.2
     # via
     #   -r requirements/dev.in
     #   pylint
-itsdangerous==2.1.2
+itsdangerous==2.2.0
     # via flask
-jinja2==3.1.3
+jinja2==3.1.4
     # via flask
-jsonschema==4.21.1
+jsonschema==4.22.0
     # via
     #   ankiscripts
     #   aqt
@@ -90,7 +90,7 @@ markupsafe==2.1.5
     #   werkzeug
 mccabe==0.7.0
     # via pylint
-mypy==1.9.0
+mypy==1.10.0
     # via -r requirements/dev.in
 mypy-extensions==1.0.0
     # via
@@ -98,7 +98,7 @@ mypy-extensions==1.0.0
     #   mypy
 nodeenv==1.8.0
     # via pre-commit
-orjson==3.9.15
+orjson==3.10.3
     # via anki
 packaging==24.0
     # via
@@ -107,20 +107,22 @@ packaging==24.0
     #   pytest
 pathspec==0.12.1
     # via black
+pip-system-certs==4.0
+    # via aqt
 pip-tools==7.4.1
     # via -r requirements\base.in
-platformdirs==4.2.0
+platformdirs==4.2.1
     # via
     #   black
     #   pylint
     #   virtualenv
-pluggy==1.4.0
+pluggy==1.5.0
     # via pytest
-pre-commit==3.6.2
+pre-commit==3.7.1
     # via -r requirements/dev.in
 prompt-toolkit==3.0.36
     # via questionary
-protobuf==5.26.0
+protobuf==5.26.1
     # via anki
 psutil==5.9.8 ; sys_platform == "win32"
     # via
@@ -129,34 +131,34 @@ psutil==5.9.8 ; sys_platform == "win32"
     #   aqt
 pylint==3.1.0
     # via -r requirements/dev.in
-pyproject-hooks==1.0.0
+pyproject-hooks==1.1.0
     # via
     #   build
     #   pip-tools
-pyqt6==6.6.1
+pyqt6==6.7.0
     # via
     #   ankiscripts
     #   aqt
     #   pyqt6-webengine
-pyqt6-qt6==6.6.2
+pyqt6-qt6==6.7.0
     # via pyqt6
 pyqt6-sip==13.6.0
     # via
     #   pyqt6
     #   pyqt6-webengine
-pyqt6-webengine==6.6.0
+pyqt6-webengine==6.7.0
     # via aqt
-pyqt6-webengine-qt6==6.6.2
+pyqt6-webengine-qt6==6.7.0
     # via pyqt6-webengine
 pysocks==1.7.1
     # via requests
-pytest==8.1.1
+pytest==8.2.0
     # via
     #   -r requirements/dev.in
     #   pytest-cov
-pytest-cov==4.1.0
+pytest-cov==5.0.0
     # via -r requirements/dev.in
-pyupgrade==3.15.1
+pyupgrade==3.15.2
     # via -r requirements/dev.in
 pywin32==306 ; sys_platform == "win32"
     # via
@@ -166,7 +168,7 @@ pyyaml==6.0.1
     # via pre-commit
 questionary==2.0.1
     # via ankiscripts
-referencing==0.34.0
+referencing==0.35.1
     # via
     #   jsonschema
     #   jsonschema-specifications
@@ -174,11 +176,11 @@ requests==2.31.0
     # via
     #   anki
     #   aqt
-rpds-py==0.18.0
+rpds-py==0.18.1
     # via
     #   jsonschema
     #   referencing
-send2trash==1.8.2
+send2trash==1.8.3
     # via aqt
 soupsieve==2.5
     # via beautifulsoup4
@@ -192,11 +194,10 @@ tomli==2.0.1
     #   mypy
     #   pip-tools
     #   pylint
-    #   pyproject-hooks
     #   pytest
-tomlkit==0.12.4
+tomlkit==0.12.5
     # via pylint
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via
     #   astroid
     #   black
@@ -204,23 +205,25 @@ typing-extensions==4.10.0
     #   pylint
 urllib3==2.2.1
     # via requests
-virtualenv==20.25.1
+virtualenv==20.26.1
     # via pre-commit
 waitress==3.0.0
     # via aqt
 wcwidth==0.2.13
     # via prompt-toolkit
-werkzeug==3.0.1
+werkzeug==3.0.3
     # via flask
 wheel==0.43.0
     # via pip-tools
+wrapt==1.16.0
+    # via pip-system-certs
 zipp==3.18.1
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 pip==24.0
     # via pip-tools
-setuptools==69.2.0
+setuptools==69.5.1
     # via
     #   nodeenv
     #   pip-tools
