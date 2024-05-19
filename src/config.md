@@ -1,0 +1,1 @@
+-   `report_errors`: Report add-on errors automatically.
