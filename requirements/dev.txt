@@ -1,6 +1,6 @@
 anki==24.4.1
     # via aqt
-ankiscripts @ git+https://github.com/abdnh/ankiscripts@d93083b033509d1a6e5f0d8493e9b3aa03d15fba
+ankiscripts @ git+https://github.com/abdnh/ankiscripts@aa83afa179f1f640efd73e36b29b55eb5408e497
     # via -r requirements/dev.in
 ankiutils @ git+https://github.com/abdnh/ankiutils@e1ce6a2573342cda831ba81fc2c7838a64ce2237
     # via -r requirements\bundle.in
