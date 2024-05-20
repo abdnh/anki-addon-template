@@ -1,5 +1,3 @@
-import ankiutils
-import ankiutils.errors
 from aqt import gui_hooks
 from aqt.qt import *
 
@@ -9,7 +7,12 @@ from .log import logger
 
 
 def _on_profile_did_open() -> None:
-    ankiutils.errors.setup_error_handler(consts, config, logger)
+    try:
+        import ankiutils.errors
+
+        ankiutils.errors.setup_error_handler(consts, config, logger)
+    except ImportError:
+        logger.warning("ankiutils.errors not found; error handling is disabled.")
 
 
 def setup_error_handler() -> None:
