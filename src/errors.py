@@ -6,14 +6,20 @@ from .config import config
 from .consts import consts
 from .log import logger
 
+REGISTERED_ERROR_HANDLER = False
+
 
 def _on_profile_did_open() -> None:
-    try:
-        import ankiutils.errors
+    global REGISTERED_ERROR_HANDLER
 
-        ankiutils.errors.setup_error_handler(consts, config, logger)
-    except ImportError:
-        logger.warning("ankiutils.errors not found; error handling is disabled.")
+    if not REGISTERED_ERROR_HANDLER:
+        try:
+            import ankiutils.errors
+
+            ankiutils.errors.setup_error_handler(consts, config, logger)
+            REGISTERED_ERROR_HANDLER = True
+        except ImportError:
+            logger.warning("ankiutils.errors not found; error handling is disabled.")
 
 
 def _before_exit() -> None:
