@@ -1,12 +1,12 @@
 anki==24.4.1
     # via aqt
-ankiscripts @ git+https://github.com/abdnh/ankiscripts@aa83afa179f1f640efd73e36b29b55eb5408e497
+ankiscripts @ git+https://github.com/abdnh/ankiscripts@8dd7af1894d2f9504ca752b3af10caae8fb977e1
     # via -r requirements/dev.in
 ankiutils @ git+https://github.com/abdnh/ankiutils@ac43bf5751760f53881417c68367b6d4ffe3735c
     # via -r requirements\bundle.in
 aqt==24.4.1
     # via -r requirements/dev.in
-astroid==3.2.1
+astroid==3.2.2
     # via pylint
 attrs==23.2.0
     # via
@@ -42,7 +42,7 @@ colorama==0.4.6
     #   click
     #   pylint
     #   pytest
-coverage==7.5.1
+coverage==7.5.2
     # via pytest-cov
 decorator==5.1.1
     # via anki
@@ -125,14 +125,14 @@ pre-commit==3.7.1
     # via -r requirements/dev.in
 prompt-toolkit==3.0.36
     # via questionary
-protobuf==5.26.1
+protobuf==5.27.0
     # via anki
 psutil==5.9.8 ; sys_platform == "win32"
     # via
     #   -r requirements/dev.in
     #   anki
     #   aqt
-pylint==3.2.1
+pylint==3.2.2
     # via -r requirements/dev.in
 pyproject-hooks==1.1.0
     # via
@@ -155,7 +155,7 @@ pyqt6-webengine-qt6==6.7.0
     # via pyqt6-webengine
 pysocks==1.7.1
     # via requests
-pytest==8.2.0
+pytest==8.2.1
     # via
     #   -r requirements/dev.in
     #   pytest-cov
@@ -175,7 +175,7 @@ referencing==0.35.1
     # via
     #   jsonschema
     #   jsonschema-specifications
-requests==2.31.0
+requests==2.32.2
     # via
     #   anki
     #   aqt
@@ -204,7 +204,7 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.12.5
     # via pylint
-typing-extensions==4.11.0
+typing-extensions==4.12.0
     # via
     #   astroid
     #   black
@@ -227,13 +227,13 @@ wheel==0.43.0
     # via pip-tools
 wrapt==1.16.0
     # via pip-system-certs
-zipp==3.18.2
+zipp==3.19.0
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 pip==24.0
     # via pip-tools
-setuptools==69.5.1
+setuptools==70.0.0
     # via
     #   nodeenv
     #   pip-tools
