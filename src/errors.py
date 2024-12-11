@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from anki.hooks import wrap
 from aqt import gui_hooks, mw
 from aqt.qt import *
@@ -34,3 +36,16 @@ def _before_exit() -> None:
 def setup_error_handler() -> None:
     gui_hooks.profile_did_open.append(_on_profile_did_open)
     mw.cleanupAndExit = wrap(mw.cleanupAndExit, _before_exit, "before")  # type: ignore
+
+
+def report_exception_and_upload_logs(exception: BaseException) -> str | None:
+    try:
+        import ankiutils.errors
+
+        return ankiutils.errors.report_exception_and_upload_logs(
+            exception, consts, config, logger
+        )
+    except ImportError:
+        logger.warning("ankiutils.errors not found; error handling is disabled.")
+
+    return None

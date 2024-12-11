@@ -1,4 +1,4 @@
-ankiutils @ git+https://github.com/abdnh/ankiutils@ac43bf5751760f53881417c68367b6d4ffe3735c
+ankiutils @ git+https://github.com/abdnh/ankiutils@63a07edafe12ae1e3f967b1c28177319132d4669
     # via -r requirements/bundle.in
 certifi==2024.2.2
     # via
