@@ -1,10 +1,10 @@
-anki==24.11
+anki==25.2
     # via aqt
-ankiscripts @ git+https://github.com/abdnh/ankiscripts@8dd7af1894d2f9504ca752b3af10caae8fb977e1
+ankiscripts @ git+https://github.com/abdnh/ankiscripts@3cd84a2aaf6f841a0e4ce4c03c76f899ce276886
     # via -r requirements/dev.in
 ankiutils @ git+https://github.com/abdnh/ankiutils@ab62ffc7cf5b433b98b6907df03a270230b618f9
     # via -r D:\dev\anki\addons\github-addon-template\requirements\bundle.in
-aqt==24.11
+aqt==25.2
     # via -r requirements/dev.in
 astroid==3.3.8
     # via pylint
@@ -12,7 +12,7 @@ attrs==25.1.0
     # via
     #   jsonschema
     #   referencing
-beautifulsoup4==4.12.3
+beautifulsoup4==4.13.3
     # via
     #   anki
     #   aqt
@@ -42,7 +42,7 @@ colorama==0.4.6
     #   click
     #   pylint
     #   pytest
-coverage==7.6.10
+coverage==7.6.12
     # via pytest-cov
 decorator==5.1.1
     # via anki
@@ -60,7 +60,7 @@ flask==3.1.0
     #   flask-cors
 flask-cors==5.0.0
     # via aqt
-identify==2.6.6
+identify==2.6.7
     # via pre-commit
 idna==3.10
     # via requests
@@ -93,7 +93,7 @@ markupsafe==3.0.2
     #   werkzeug
 mccabe==0.7.0
     # via pylint
-mypy==1.14.1
+mypy==1.15.0
     # via -r requirements/dev.in
 mypy-extensions==1.0.0
     # via
@@ -138,20 +138,20 @@ pyproject-hooks==1.2.0
     # via
     #   build
     #   pip-tools
-pyqt6==6.8.0
+pyqt6==6.8.1
     # via
     #   ankiscripts
     #   aqt
     #   pyqt6-webengine
-pyqt6-qt6==6.8.1
+pyqt6-qt6==6.8.2
     # via pyqt6
-pyqt6-sip==13.9.1
+pyqt6-sip==13.10.0
     # via
     #   pyqt6
     #   pyqt6-webengine
 pyqt6-webengine==6.8.0
     # via aqt
-pyqt6-webengine-qt6==6.8.1
+pyqt6-webengine-qt6==6.8.2
     # via pyqt6-webengine
 pysocks==1.7.1
     # via requests
@@ -207,6 +207,7 @@ tomlkit==0.13.2
 typing-extensions==4.12.2
     # via
     #   astroid
+    #   beautifulsoup4
     #   black
     #   mypy
     #   pylint
@@ -216,7 +217,7 @@ urllib3==2.2.1
     #   ankiutils
     #   requests
     #   sentry-sdk
-virtualenv==20.29.1
+virtualenv==20.29.2
     # via pre-commit
 waitress==3.0.2
     # via aqt
@@ -232,7 +233,7 @@ zipp==3.21.0
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
-pip==25.0
+pip==25.0.1
     # via pip-tools
 setuptools==75.8.0
     # via pip-tools
