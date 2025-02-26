@@ -1,6 +1,6 @@
 -r base.in
 -r bundle.in
-aqt[qt6]
+aqt
 # Transitive Windows dependencies
 psutil; sys.platform == "win32"
 pywin32; sys.platform == "win32"
@@ -12,4 +12,4 @@ pyupgrade
 pytest
 pytest-cov
 pre-commit
-ankiscripts[forms] @ git+https://github.com/abdnh/ankiscripts@6ec0c94ed1faf472e4be0244528344fcd6a62510
+ankiscripts[forms] @ git+https://github.com/abdnh/ankiscripts@d9f13f0e3bc72a6505dbce8b7855b8d6f61c0aa7
