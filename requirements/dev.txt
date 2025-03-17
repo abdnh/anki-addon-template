@@ -1,14 +1,14 @@
 anki==25.2
     # via aqt
-ankiscripts @ git+https://github.com/abdnh/ankiscripts@d9f13f0e3bc72a6505dbce8b7855b8d6f61c0aa7
+ankiscripts @ git+https://github.com/abdnh/ankiscripts@6503ae9a4355987534460dd129f07f8c5a565382
     # via -r requirements/dev.in
 ankiutils @ git+https://github.com/abdnh/ankiutils@94abc7de2bf28905c7504d02346010bab896af2e
     # via -r D:\dev\anki\addons\github-addon-template\requirements\bundle.in
 aqt==25.2
     # via -r requirements/dev.in
-astroid==3.3.8
+astroid==3.3.9
     # via pylint
-attrs==25.1.0
+attrs==25.3.0
     # via
     #   jsonschema
     #   referencing
@@ -42,7 +42,7 @@ colorama==0.4.6
     #   click
     #   pylint
     #   pytest
-coverage==7.6.12
+coverage==7.7.0
     # via pytest-cov
 decorator==5.2.1
     # via anki
@@ -52,7 +52,7 @@ distlib==0.3.9
     # via virtualenv
 exceptiongroup==1.2.2
     # via pytest
-filelock==3.17.0
+filelock==3.18.0
     # via virtualenv
 flask==3.1.0
     # via
@@ -60,7 +60,7 @@ flask==3.1.0
     #   flask-cors
 flask-cors==5.0.1
     # via aqt
-identify==2.6.8
+identify==2.6.9
     # via pre-commit
 idna==3.10
     # via requests
@@ -77,7 +77,7 @@ isort==6.0.1
     #   pylint
 itsdangerous==2.2.0
     # via flask
-jinja2==3.1.5
+jinja2==3.1.6
     # via flask
 jsonschema==4.23.0
     # via
@@ -125,14 +125,14 @@ pre-commit==4.1.0
     # via -r requirements/dev.in
 prompt-toolkit==3.0.50
     # via questionary
-protobuf==5.29.3
+protobuf==6.30.1
     # via anki
 psutil==7.0.0 ; sys_platform == "win32"
     # via
     #   -r requirements/dev.in
     #   anki
     #   aqt
-pylint==3.3.4
+pylint==3.3.5
     # via -r requirements/dev.in
 pyproject-hooks==1.2.0
     # via
@@ -155,7 +155,7 @@ pyqt6-webengine-qt6==6.8.2
     # via pyqt6-webengine
 pysocks==1.7.1
     # via requests
-pytest==8.3.4
+pytest==8.3.5
     # via
     #   -r requirements/dev.in
     #   pytest-cov
@@ -163,7 +163,7 @@ pytest-cov==6.0.0
     # via -r requirements/dev.in
 pyupgrade==3.19.1
     # via -r requirements/dev.in
-pywin32==308 ; sys_platform == "win32"
+pywin32==310 ; sys_platform == "win32"
     # via
     #   -r requirements/dev.in
     #   aqt
@@ -217,7 +217,7 @@ urllib3==2.2.1
     #   ankiutils
     #   requests
     #   sentry-sdk
-virtualenv==20.29.2
+virtualenv==20.29.3
     # via pre-commit
 waitress==3.0.2
     # via aqt
@@ -237,5 +237,5 @@ zipp==3.21.0
 # The following packages are considered to be unsafe in a requirements file:
 pip==25.0.1
     # via pip-tools
-setuptools==75.8.2
+setuptools==76.0.0
     # via pip-tools
