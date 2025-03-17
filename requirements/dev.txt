@@ -1,9 +1,9 @@
 anki==25.2
     # via aqt
-ankiscripts @ git+https://github.com/abdnh/ankiscripts@6503ae9a4355987534460dd129f07f8c5a565382
+ankiscripts @ git+https://github.com/abdnh/ankiscripts@af62cee768fec20b2f534bf50c455f3f29d63eaa
     # via -r requirements/dev.in
 ankiutils @ git+https://github.com/abdnh/ankiutils@94abc7de2bf28905c7504d02346010bab896af2e
-    # via -r D:\dev\anki\addons\github-addon-template\requirements\bundle.in
+    # via -r requirements/bundle.in
 aqt==25.2
     # via -r requirements/dev.in
 astroid==3.3.9
@@ -20,8 +20,6 @@ black==25.1.0
     # via -r requirements/dev.in
 blinker==1.9.0
     # via flask
-build==1.2.2.post1
-    # via pip-tools
 certifi==2024.2.2
     # via
     #   ankiutils
@@ -35,10 +33,8 @@ click==8.1.8
     # via
     #   black
     #   flask
-    #   pip-tools
-colorama==0.4.6
+colorama==0.4.6 ; sys_platform == 'win32'
     # via
-    #   build
     #   click
     #   pylint
     #   pytest
@@ -50,7 +46,9 @@ dill==0.3.9
     # via pylint
 distlib==0.3.9
     # via virtualenv
-exceptiongroup==1.2.2
+distro==1.9.0 ; sys_platform != 'darwin' and sys_platform != 'win32'
+    # via anki
+exceptiongroup==1.2.2 ; python_full_version < '3.11'
     # via pytest
 filelock==3.18.0
     # via virtualenv
@@ -64,9 +62,8 @@ identify==2.6.9
     # via pre-commit
 idna==3.10
     # via requests
-importlib-metadata==8.6.1
+importlib-metadata==8.6.1 ; python_full_version < '3.10'
     # via
-    #   build
     #   flask
     #   markdown
 iniconfig==2.0.0
@@ -106,14 +103,11 @@ orjson==3.10.15
 packaging==24.2
     # via
     #   black
-    #   build
     #   pytest
 pathspec==0.12.1
     # via black
 pip-system-certs==4.0
     # via aqt
-pip-tools==7.4.1
-    # via -r D:\dev\anki\addons\github-addon-template\requirements\base.in
 platformdirs==4.3.6
     # via
     #   black
@@ -127,17 +121,13 @@ prompt-toolkit==3.0.50
     # via questionary
 protobuf==6.30.1
     # via anki
-psutil==7.0.0 ; sys_platform == "win32"
+psutil==7.0.0 ; sys_platform == 'win32'
     # via
     #   -r requirements/dev.in
     #   anki
     #   aqt
 pylint==3.3.5
     # via -r requirements/dev.in
-pyproject-hooks==1.2.0
-    # via
-    #   build
-    #   pip-tools
 pyqt6==6.8.1
     # via
     #   ankiscripts
@@ -163,7 +153,7 @@ pytest-cov==6.0.0
     # via -r requirements/dev.in
 pyupgrade==3.19.1
     # via -r requirements/dev.in
-pywin32==310 ; sys_platform == "win32"
+pywin32==310 ; sys_platform == 'win32'
     # via
     #   -r requirements/dev.in
     #   aqt
@@ -187,19 +177,17 @@ send2trash==1.8.3
     # via aqt
 sentry-sdk==1.14.0
     # via
-    #   -r D:\dev\anki\addons\github-addon-template\requirements\bundle.in
+    #   -r requirements/bundle.in
     #   ankiutils
 soupsieve==2.6
     # via beautifulsoup4
 tokenize-rt==6.1.0
     # via pyupgrade
-tomli==2.2.1
+tomli==2.2.1 ; python_full_version <= '3.11'
     # via
     #   black
-    #   build
     #   coverage
     #   mypy
-    #   pip-tools
     #   pylint
     #   pytest
 tomlkit==0.13.2
@@ -217,6 +205,8 @@ urllib3==2.2.1
     #   ankiutils
     #   requests
     #   sentry-sdk
+uv==0.6.6
+    # via -r requirements/base.in
 virtualenv==20.29.3
     # via pre-commit
 waitress==3.0.2
@@ -227,15 +217,7 @@ werkzeug==3.1.3
     # via
     #   flask
     #   flask-cors
-wheel==0.45.1
-    # via pip-tools
 wrapt==1.17.2
     # via pip-system-certs
-zipp==3.21.0
+zipp==3.21.0 ; python_full_version < '3.10'
     # via importlib-metadata
-
-# The following packages are considered to be unsafe in a requirements file:
-pip==25.0.1
-    # via pip-tools
-setuptools==76.0.0
-    # via pip-tools
