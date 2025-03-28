@@ -15,13 +15,10 @@ def _on_profile_did_open() -> None:
     global REGISTERED_ERROR_HANDLER
 
     if not REGISTERED_ERROR_HANDLER:
-        try:
-            import ankiutils.errors
+        from .ankiutils.errors import setup_error_handler
 
-            ankiutils.errors.setup_error_handler(consts, config, logger)
-            REGISTERED_ERROR_HANDLER = True
-        except ImportError:
-            logger.warning("ankiutils.errors not found; error handling is disabled.")
+        setup_error_handler(consts, config, logger)
+        REGISTERED_ERROR_HANDLER = True
 
 
 def _before_exit() -> None:
@@ -39,13 +36,6 @@ def setup_error_handler() -> None:
 
 
 def report_exception_and_upload_logs(exception: BaseException) -> str | None:
-    try:
-        import ankiutils.errors
+    from .ankiutils import errors
 
-        return ankiutils.errors.report_exception_and_upload_logs(
-            exception, consts, config, logger
-        )
-    except ImportError:
-        logger.warning("ankiutils.errors not found; error handling is disabled.")
-
-    return None
+    return errors.report_exception_and_upload_logs(exception, consts, config, logger)

@@ -1,10 +1,11 @@
 from typing import Optional
 
-import ankiutils.gui.dialog
 from aqt.qt import *
 
+from ..ankiutils.gui import dialog
 
-class Dialog(ankiutils.gui.dialog.Dialog):
+
+class Dialog(dialog.Dialog):
     def __init__(
         self,
         parent: Optional[QWidget] = None,

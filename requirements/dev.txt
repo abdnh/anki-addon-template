@@ -1,6 +1,6 @@
 anki==25.2
     # via aqt
-ankiscripts @ git+https://github.com/abdnh/ankiscripts@af62cee768fec20b2f534bf50c455f3f29d63eaa
+ankiscripts @ git+https://github.com/abdnh/ankiscripts@17026e7a3653166cc28b76da7062496d686eb1b9
     # via -r requirements/dev.in
 ankiutils @ git+https://github.com/abdnh/ankiutils@94abc7de2bf28905c7504d02346010bab896af2e
     # via -r requirements/bundle.in
@@ -38,7 +38,7 @@ colorama==0.4.6 ; sys_platform == 'win32'
     #   click
     #   pylint
     #   pytest
-coverage==7.7.0
+coverage==7.7.1
     # via pytest-cov
 decorator==5.2.1
     # via anki
@@ -66,7 +66,7 @@ importlib-metadata==8.6.1 ; python_full_version < '3.10'
     # via
     #   flask
     #   markdown
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via pytest
 isort==6.0.1
     # via
@@ -98,7 +98,7 @@ mypy-extensions==1.0.0
     #   mypy
 nodeenv==1.9.1
     # via pre-commit
-orjson==3.10.15
+orjson==3.10.16
     # via anki
 packaging==24.2
     # via
@@ -108,25 +108,25 @@ pathspec==0.12.1
     # via black
 pip-system-certs==4.0
     # via aqt
-platformdirs==4.3.6
+platformdirs==4.3.7
     # via
     #   black
     #   pylint
     #   virtualenv
 pluggy==1.5.0
     # via pytest
-pre-commit==4.1.0
+pre-commit==4.2.0
     # via -r requirements/dev.in
 prompt-toolkit==3.0.50
     # via questionary
-protobuf==6.30.1
+protobuf==6.30.2
     # via anki
 psutil==7.0.0 ; sys_platform == 'win32'
     # via
     #   -r requirements/dev.in
     #   anki
     #   aqt
-pylint==3.3.5
+pylint==3.3.6
     # via -r requirements/dev.in
 pyqt6==6.8.1
     # via
@@ -169,7 +169,7 @@ requests==2.32.3
     # via
     #   anki
     #   aqt
-rpds-py==0.23.1
+rpds-py==0.24.0
     # via
     #   jsonschema
     #   referencing
@@ -192,7 +192,7 @@ tomli==2.2.1 ; python_full_version <= '3.11'
     #   pytest
 tomlkit==0.13.2
     # via pylint
-typing-extensions==4.12.2
+typing-extensions==4.13.0
     # via
     #   astroid
     #   beautifulsoup4
@@ -205,7 +205,7 @@ urllib3==2.2.1
     #   ankiutils
     #   requests
     #   sentry-sdk
-uv==0.6.6
+uv==0.6.10
     # via -r requirements/base.in
 virtualenv==20.29.3
     # via pre-commit
