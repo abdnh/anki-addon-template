@@ -127,21 +127,29 @@ psutil==7.0.0 ; sys_platform == 'win32'
     #   aqt
 pylint==3.3.6
     # via -r requirements/dev.in
-pyqt6==6.9.0
+pyqt6==6.6.1
     # via
+    #   -c requirements/constraints.txt
     #   ankiscripts
     #   aqt
     #   pyqt6-webengine
-pyqt6-qt6==6.9.0
-    # via pyqt6
-pyqt6-sip==13.10.0
+pyqt6-qt6==6.6.2
     # via
+    #   -c requirements/constraints.txt
+    #   pyqt6
+pyqt6-sip==13.6.0
+    # via
+    #   -c requirements/constraints.txt
     #   pyqt6
     #   pyqt6-webengine
-pyqt6-webengine==6.9.0
-    # via aqt
-pyqt6-webengine-qt6==6.9.0
-    # via pyqt6-webengine
+pyqt6-webengine==6.6.0
+    # via
+    #   -c requirements/constraints.txt
+    #   aqt
+pyqt6-webengine-qt6==6.6.2
+    # via
+    #   -c requirements/constraints.txt
+    #   pyqt6-webengine
 pysocks==1.7.1
     # via requests
 pytest==8.3.5

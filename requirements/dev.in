@@ -1,3 +1,4 @@
+-c constraints.txt
 -r base.in
 -r bundle.in
 aqt
