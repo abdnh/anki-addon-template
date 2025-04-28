@@ -1,9 +1,6 @@
 -r base.in
 -r bundle.in
 aqt
-# Transitive Windows dependencies
-psutil; sys.platform == "win32"
-pywin32; sys.platform == "win32"
 mypy
 pylint
 black

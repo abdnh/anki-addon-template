@@ -1,2 +1,2 @@
-uv==0.6.6
+uv==0.6.17
     # via -r requirements/base.in
