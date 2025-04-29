@@ -78,8 +78,8 @@ dev = [
 
 [[package]]
 name = "ankiscripts"
-version = "1.3.1.dev63+g0050cca"
-source = { git = "https://github.com/abdnh/ankiscripts?branch=master#0050cca227d0204e55adda79ae58e1596c845302" }
+version = "1.3.1.dev65+g4a5b71d"
+source = { git = "https://github.com/abdnh/ankiscripts?branch=master#4a5b71d636c8737cc46b24b4ec570a936b24b809" }
 dependencies = [
     { name = "jsonschema" },
     { name = "questionary" },
