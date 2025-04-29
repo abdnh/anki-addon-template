@@ -11,7 +11,7 @@ Anki add-on template for my projects.
 -   [pylint](.pylintrc), [mypy](mypy.ini), black, and [isort](.isort.cfg) are used for linting and formatting.
 -   Tests are in the [tests](tests) folder.
 -   a [Makefile](Makefile) is used to run build & lint commands.
--   Requirements are specified in \*.in files inside the [requirements](requirements) subfolder. [uv's pip interface](https://docs.astral.sh/uv/pip/compatibility/) is used to update and pin dependencies, generating corresponding .txt files.
+-   [uv](https://docs.astral.sh/uv/) is used to manage requirements in [pyproject.toml](pyproject.toml).
 -   [CHANGELOG.md](CHANGELOG.md) follows the [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format.
 -   The description for the AnkiWeb listing is in [ankiweb_page.html](ankiweb_page.html). [ankiwebify-readme](https://github.com/abdnh/ankiwebify-readme) can be used to convert some sections of README.md to the HTML accepted by AnkiWeb.
 -   The add-on is [licensed](LICENSE) under [GNU AGPLv3](https://choosealicense.com/licenses/agpl-3.0/).

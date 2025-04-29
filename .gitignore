@@ -1,12 +1,15 @@
 __pycache__/
+*.py[oc]
 *.egg-info/
-venv/
+build/
+dist/
+wheels/
+.venv/
 .mypy_cache/
 .pytest_cache/
 htmlcov/
 .coverage
 ankidata/
-build/
 src/manifest.json
 src/meta.json
 src/forms/

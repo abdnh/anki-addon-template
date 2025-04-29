@@ -49,27 +49,6 @@ repos:
             language: system
             types: [python]
             require_serial: true
-          - id: pip-compile
-            name: pip-compile base
-            entry: python -m ankiscripts.update_deps --type base
-            language: system
-            files: ^(requirements/base\.(in|txt))$
-            pass_filenames: false
-            require_serial: true
-          - id: pip-compile
-            name: pip-compile bundle
-            entry: python -m ankiscripts.update_deps --type bundle
-            language: system
-            files: ^(requirements/bundle\.(in|txt))$
-            pass_filenames: false
-            require_serial: true
-          - id: pip-compile
-            name: pip-compile dev
-            entry: python -m ankiscripts.update_deps --type dev
-            language: system
-            files: ^(requirements/dev\.(in|txt))$
-            pass_filenames: false
-            require_serial: true
 
     - repo: https://github.com/pre-commit/mirrors-prettier
       rev: v3.0.1
