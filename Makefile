@@ -1,4 +1,4 @@
-.PHONY: all zip ankiweb vendor fix mypy pylint lint test sourcedist clean
+.PHONY: all zip ankiweb vendor ruff-format ruff-check ruff-fix fix mypy lint test sourcedist clean
 
 all: zip ankiweb
 
@@ -13,16 +13,21 @@ ankiweb:
 vendor:
 	$(UV_RUN) python -m ankiscripts.vendor
 
-fix:
-	$(UV_RUN) pre-commit run -a black
-	$(UV_RUN) pre-commit run -a isort
+ruff-format:
+	$(UV_RUN) pre-commit run -a ruff-format
+
+ruff-check:
+	$(UV_RUN) ruff check
+
+ruff-fix:
+	$(UV_RUN) pre-commit run -a ruff-check
+
+fix: ruff-format ruff-fix
+
 mypy:
 	-$(UV_RUN) pre-commit run -a mypy
 
-pylint:
-	-$(UV_RUN) pre-commit run -a pylint
-
-lint: mypy pylint
+lint: mypy ruff-check
 
 test:
 	$(UV_RUN) python -m  pytest --cov=src --cov-config=.coveragerc

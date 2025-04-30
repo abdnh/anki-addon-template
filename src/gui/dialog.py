@@ -1,6 +1,6 @@
 from typing import Optional
 
-from aqt.qt import *
+from aqt.qt import Qt, QWidget
 
 from ..ankiutils.gui import dialog
 

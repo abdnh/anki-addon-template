@@ -28,7 +28,7 @@ build-constraint-dependencies = [
     "pyqt6-qt6==6.6.2",
     "pyqt6-webengine==6.6.0",
     "pyqt6-webengine-qt6==6.6.2",
-    "pyqt6_sip==13.6.0"
+    "pyqt6_sip==13.6.0",
 ]
 
 [tool.uv.sources]
@@ -40,16 +40,31 @@ dev = [
     "ankiscripts[forms]",
     "ankiutils",
     "aqt>=25.2.4",
-    "black>=25.1.0",
-    "isort>=6.0.1",
     "mypy>=1.15.0",
     "pre-commit>=4.2.0",
-    "pylint>=3.3.6",
     "pytest>=8.3.5",
     "pytest-cov>=6.1.1",
-    "pyupgrade>=3.19.1",
+    "ruff>=0.11.7",
     "sentry-sdk>=1.14.0",
 ]
 
 [project.urls]
 Repository = "https://github.com/abdnh/anki-addon-template"
+
+[tool.ruff]
+exclude = [
+    ".venv",
+    "ankidata",
+    "vendor",
+    "forms",
+    "user_files",
+    "build",
+    "src/ankiutils",
+    "node_modules",
+]
+
+
+[tool.ruff.lint]
+extend-select = ["I", "UP", "PL"]
+
+ignore = ["PLW0603"]

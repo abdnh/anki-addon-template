@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from anki.hooks import wrap
 from aqt import gui_hooks, mw
-from aqt.qt import *
 
 from .config import config
 from .consts import consts

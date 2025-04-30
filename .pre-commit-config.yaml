@@ -19,33 +19,21 @@ repos:
 
     - repo: local
       hooks:
-          - id: black
-            name: black
-            entry: python -m black src tests --exclude="forms|vendor"
-            language: system
-            types: [python]
-            require_serial: true
-          - id: isort
-            name: isort
-            entry: python -m isort src tests
-            language: system
-            types: [python]
-            require_serial: true
-          - id: pylint
-            name: pylint
-            entry: python -m pylint src tests
-            language: system
-            types: [python]
-            require_serial: true
           - id: mypy
             name: mypy
             entry: python -m mypy
             language: system
             types: [python]
             require_serial: true
-          - id: pyupgrade
-            name: pyupgrade
-            entry: pyupgrade --py38-plus
+          - id: ruff-check
+            name: ruff
+            entry: ruff check --force-exclude --fix
+            language: system
+            types: [python]
+            require_serial: true
+          - id: ruff-format
+            name: ruff
+            entry: ruff format --force-exclude
             language: system
             types: [python]
             require_serial: true
