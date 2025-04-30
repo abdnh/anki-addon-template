@@ -21,7 +21,7 @@ package-dir = { "anki_addon_template" = "src" }
 [tool.setuptools_scm]
 
 [tool.uv]
-build-constraint-dependencies = [
+constraint-dependencies = [
     # This is used to constrain Qt versions to the ones used in Anki builds to avoid regressions in newer versions.
     # See https://github.com/ankitects/anki/blob/main/python/requirements.qt6_6.in
     "pyqt6==6.6.1",
