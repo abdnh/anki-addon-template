@@ -32,7 +32,7 @@ jobs:
             - name: Extract changes
               shell: bash
               run: |
-                  python -m ankiscripts.changes ${{ github.ref }} > build/RELEASE.md
+                  uv run -- python -m ankiscripts.changes ${{ github.ref }} > build/RELEASE.md
 
             - name: Release
               uses: softprops/action-gh-release@v2
