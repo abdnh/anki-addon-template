@@ -63,7 +63,6 @@ exclude = [
     "node_modules",
 ]
 
-
 [tool.ruff.lint]
 extend-select = ["I", "UP", "PL"]
 

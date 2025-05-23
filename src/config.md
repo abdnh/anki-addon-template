@@ -1,1 +1,1 @@
--   `report_errors`: Report add-on errors automatically.
+- `report_errors`: Report add-on errors automatically.
