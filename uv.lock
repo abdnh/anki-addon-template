@@ -94,8 +94,8 @@ forms = [
 
 [[package]]
 name = "ankiutils"
-version = "0.1.dev33+g94abc7d"
-source = { git = "https://github.com/abdnh/ankiutils?branch=master#94abc7de2bf28905c7504d02346010bab896af2e" }
+version = "0.1.dev34+gfb025a2"
+source = { git = "https://github.com/abdnh/ankiutils?branch=master#fb025a23214f005d879ac0f6dfa6cfc7c03d3c7d" }
 dependencies = [
     { name = "certifi" },
     { name = "sentry-sdk" },
