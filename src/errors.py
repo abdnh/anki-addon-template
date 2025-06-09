@@ -24,7 +24,8 @@ def _before_exit() -> None:
     import atexit
     import logging
 
-    # Fix 'RuntimeError: wrapped C/C++ object of type ErrorHandler has been deleted' on shutdown
+    # Fix 'RuntimeError: wrapped C/C++ object of type ErrorHandler has been deleted'
+    # on shutdown
     atexit.unregister(logging.shutdown)
     logging.shutdown()
 
