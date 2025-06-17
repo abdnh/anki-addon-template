@@ -59,7 +59,6 @@ exclude = [
     "forms",
     "user_files",
     "build",
-    "src/ankiutils",
     "node_modules",
 ]
 
