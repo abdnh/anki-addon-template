@@ -1,4 +1,4 @@
-exclude: "venv|vendor|build"
+exclude: ".venv|vendor|build"
 default_stages: [pre-commit]
 
 repos:
