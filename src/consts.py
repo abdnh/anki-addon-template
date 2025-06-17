@@ -1,3 +1,3 @@
-from .ankiutils.consts import get_consts
+from .vendor.ankiutils.consts import get_consts
 
 consts = get_consts(__name__)

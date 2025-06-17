@@ -2,7 +2,7 @@ from typing import Optional
 
 from aqt.qt import Qt, QWidget
 
-from ..ankiutils.gui import dialog
+from ..vendor.ankiutils.gui import dialog
 
 
 class Dialog(dialog.Dialog):

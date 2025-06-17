@@ -14,7 +14,7 @@ def _on_profile_did_open() -> None:
     global REGISTERED_ERROR_HANDLER
 
     if not REGISTERED_ERROR_HANDLER:
-        from .ankiutils.errors import setup_error_handler
+        from .vendor.ankiutils.errors import setup_error_handler
 
         setup_error_handler(consts, config, logger)
         REGISTERED_ERROR_HANDLER = True
@@ -36,6 +36,6 @@ def setup_error_handler() -> None:
 
 
 def report_exception_and_upload_logs(exception: BaseException) -> str | None:
-    from .ankiutils import errors
+    from .vendor.ankiutils import errors
 
     return errors.report_exception_and_upload_logs(exception, consts, config, logger)
