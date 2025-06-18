@@ -2,6 +2,7 @@
     "[html]": {
         "editor.formatOnSave": false
     },
+    "editor.defaultFormatter": "dprint.dprint",
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
     },

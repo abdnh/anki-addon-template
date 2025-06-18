@@ -3,6 +3,7 @@
         "ms-python.python",
         "matangover.mypy",
         "charliermarsh.ruff",
+        "dprint.dprint",
         "abdo.ankiwebify"
     ]
 }
