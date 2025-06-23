@@ -52,7 +52,7 @@ dev = [
 Repository = "https://github.com/abdnh/anki-addon-template"
 
 [tool.ruff]
-exclude = [
+extend-exclude = [
     ".venv",
     "ankidata",
     "vendor",
