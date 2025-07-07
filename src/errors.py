@@ -36,4 +36,3 @@ def setup_error_handler() -> None:
 
 def report_exception_and_upload_logs(exception: BaseException) -> str | None:
     return errors.report_exception_and_upload_logs(exception, consts, config, logger)
-    return errors.report_exception_and_upload_logs(exception, consts, config, logger)
