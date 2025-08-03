@@ -18,19 +18,6 @@ dependencies = ["ankiutils", "sentry-sdk>=1.14.0"]
 [tool.setuptools]
 package-dir = { "anki_addon_template" = "src" }
 
-[tool.setuptools_scm]
-
-[tool.uv]
-constraint-dependencies = [
-    # This is used to constrain Qt versions to the ones used in Anki builds to avoid regressions in newer versions.
-    # See https://github.com/ankitects/anki/blob/main/python/requirements.qt6_6.in
-    "pyqt6==6.6.1",
-    "pyqt6-qt6==6.6.2",
-    "pyqt6-webengine==6.6.0",
-    "pyqt6-webengine-qt6==6.6.2",
-    "pyqt6_sip==13.6.0",
-]
-
 [tool.uv.sources]
 ankiscripts = { git = "https://github.com/abdnh/ankiscripts", branch = "master" }
 ankiutils = { git = "https://github.com/abdnh/ankiutils", branch = "master" }
