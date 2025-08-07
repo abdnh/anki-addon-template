@@ -30,7 +30,7 @@ mypy:
 lint: mypy ruff-check
 
 test:
-	$(UV_RUN) python -m  pytest --cov=src --cov-config=.coveragerc
+	$(UV_RUN) python -m  pytest
 
 sourcedist:
 	$(UV_RUN) python -m ankiscripts.sourcedist

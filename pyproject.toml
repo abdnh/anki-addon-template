@@ -52,3 +52,10 @@ extend-exclude = [
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "PL", "TRY"]
 ignore = ["PLW0603", "PLR2004"]
+
+[tool.pytest.ini_options]
+addopts = "--cov=src"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+omit = ["src/forms/*", "src/vendor/*"]
