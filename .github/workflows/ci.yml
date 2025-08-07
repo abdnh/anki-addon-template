@@ -31,7 +31,7 @@ jobs:
               run: .github/workflows/install_deps.sh
 
             - name: Build
-              run: make vendor && make
+              run: make vendor && make ankiweb
 
             - name: Run checks
               run: uv run -- pre-commit run --all-files
