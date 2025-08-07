@@ -30,7 +30,7 @@ jobs:
               run: .github/workflows/install_deps.sh
 
             - name: Create packages
-              run: make vendor && make
+              run: make vendor && make ankiweb
 
             - name: Extract changes
               shell: bash
