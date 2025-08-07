@@ -54,7 +54,7 @@ select = ["E", "F", "I", "UP", "PL", "TRY"]
 ignore = ["PLW0603", "PLR2004"]
 
 [tool.pytest.ini_options]
-addopts = "--cov=src"
+addopts = "--cov=src --cov-branch"
 testpaths = ["tests"]
 
 [tool.coverage.run]
