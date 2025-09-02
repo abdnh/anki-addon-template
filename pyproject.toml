@@ -59,3 +59,28 @@ testpaths = ["tests"]
 
 [tool.coverage.run]
 omit = ["src/forms/*", "src/vendor/*"]
+
+[tool.mypy]
+python_version = "3.9"
+pretty = true
+strict_optional = false
+show_error_codes = true
+disallow_untyped_decorators = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unused_ignores = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+strict_equality = true
+exclude = ["venv", "ankidata", "vendor", "user_files", "build"]
+modules = ["src", "tests"]
+
+[[tool.mypy.overrides]]
+module = "src.forms.*"
+ignore_errors = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "src.vendor.*"
+ignore_missing_imports = true
+ignore_errors = true
