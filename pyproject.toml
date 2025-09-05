@@ -61,7 +61,7 @@ testpaths = ["tests"]
 omit = ["src/forms/*", "src/vendor/*"]
 
 [tool.mypy]
-python_version = "3.9"
+python_version = "3.13"
 pretty = true
 strict_optional = false
 show_error_codes = true
