@@ -33,6 +33,7 @@ dev = [
     "pytest-cov>=6.1.1",
     "ruff>=0.11.7",
     "sentry-sdk>=1.14.0",
+    "types-waitress",
 ]
 
 [project.urls]

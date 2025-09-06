@@ -15,6 +15,7 @@ src/meta.json
 src/forms/
 src/user_files/*/
 src/bin/
+src/web/sveltekit/
 vendor/
 node_modules/
 TODO.md
