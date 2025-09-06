@@ -10,7 +10,8 @@
             "justMyCode": true,
             "args": ["-b", "ankidata"],
             "env": {
-                "REPORT_ERRORS": "0"
+                "REPORT_ERRORS": "0",
+                "ADDON_NAME_HMR": "1"
             }
         }
     ]
