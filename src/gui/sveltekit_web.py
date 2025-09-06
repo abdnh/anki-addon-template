@@ -3,9 +3,9 @@ from __future__ import annotations
 from aqt.qt import Qt, QUrl, QVBoxLayout, QWidget
 from aqt.webview import AnkiWebView
 
+from .. import sveltekit
 from ..consts import consts
 from ..log import logger
-from ..sveltekit_server import get_sveltekit_server
 from .dialog import Dialog
 
 
@@ -31,5 +31,5 @@ class SveltekitWebDialog(Dialog):
 
     def _load_page(self) -> None:
         self.web.set_open_links_externally(False)
-        self.web.load_url(QUrl(f"{get_sveltekit_server().get_url()}/{self.path}"))
+        self.web.load_url(QUrl(f"{sveltekit.get_server().get_url()}/{self.path}"))
         self.web.add_dynamic_styling_and_props_then_show()

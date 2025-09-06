@@ -47,7 +47,6 @@ dev = [
     { name = "pytest-cov" },
     { name = "ruff" },
     { name = "sentry-sdk" },
-    { name = "types-waitress" },
 ]
 
 [package.metadata]
@@ -67,7 +66,6 @@ dev = [
     { name = "pytest-cov", specifier = ">=6.1.1" },
     { name = "ruff", specifier = ">=0.11.7" },
     { name = "sentry-sdk", specifier = ">=1.14.0" },
-    { name = "types-waitress" },
 ]
 
 [[package]]
@@ -96,8 +94,8 @@ forms = [
 
 [[package]]
 name = "ankiutils"
-version = "0.1.dev66+g5a59bcb12"
-source = { git = "https://github.com/abdnh/ankiutils?branch=master#5a59bcb120906fdc974d5287ff338f3c5878f99e" }
+version = "0.1.dev68+g830c45796"
+source = { git = "https://github.com/abdnh/ankiutils?branch=master#830c457961440248cbd7cd88732a1a1575eb4dae" }
 dependencies = [
     { name = "sentry-sdk" },
     { name = "structlog" },
@@ -1537,15 +1535,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5b/b9/1ed31d167be802da0fc95020d04cd27b7d7065cc6fbefdd2f9186f60d7bd/tomli-2.2.1-cp313-cp313-win32.whl", hash = "sha256:d3f5614314d758649ab2ab3a62d4f2004c825922f9e370b29416484086b264ec", size = 98724, upload-time = "2024-11-27T22:38:32.837Z" },
     { url = "https://files.pythonhosted.org/packages/c7/32/b0963458706accd9afcfeb867c0f9175a741bf7b19cd424230714d722198/tomli-2.2.1-cp313-cp313-win_amd64.whl", hash = "sha256:a38aa0308e754b0e3c67e344754dff64999ff9b513e691d0e786265c93583c69", size = 109383, upload-time = "2024-11-27T22:38:34.455Z" },
     { url = "https://files.pythonhosted.org/packages/6e/c2/61d3e0f47e2b74ef40a68b9e6ad5984f6241a942f7cd3bbfbdbd03861ea9/tomli-2.2.1-py3-none-any.whl", hash = "sha256:cb55c73c5f4408779d0cf3eef9f762b9c9f147a77de7b258bef0a5628adc85cc", size = 14257, upload-time = "2024-11-27T22:38:35.385Z" },
-]
-
-[[package]]
-name = "types-waitress"
-version = "3.0.1.20250801"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/39/d4/ec386bf1166249c59fd6fc6bb83b174da33540a272d4b45b6ecac3978a7c/types_waitress-3.0.1.20250801.tar.gz", hash = "sha256:f919fda09e44798771d8ac54bb8573c165f1a1bc1aa9bfbf4296603db59455be", size = 14215, upload-time = "2025-08-01T03:48:11.975Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/03/14/0bd9a8de7c618de4434b3954eedf2ba11a962d5b1ab2311d7c10b8402bdc/types_waitress-3.0.1.20250801-py3-none-any.whl", hash = "sha256:17830a3bf096a967368cfc4dfaf19e2ab6cde8ac880747ebb47c01ca85704d9f", size = 17477, upload-time = "2025-08-01T03:48:10.869Z" },
 ]
 
 [[package]]
