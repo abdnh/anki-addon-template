@@ -14,11 +14,4 @@ class Dialog(dialog.Dialog):
         subtitle: str = "",
     ) -> None:
         self.subtitle = subtitle
-        super().__init__(__name__, parent, flags)
-
-    def setup_ui(self) -> None:
-        super().setup_ui()
-        title = consts.name
-        if self.subtitle:
-            title += f" - {self.subtitle}"
-        self.setWindowTitle(title)
+        super().__init__(consts=consts, parent=parent, flags=flags, subtitle=subtitle)
