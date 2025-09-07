@@ -5,7 +5,7 @@ patch_certifi()
 # ruff: noqa: E402
 from aqt import QMenu, mw
 
-from . import sveltekit
+from . import deckbrowser, sveltekit
 from .consts import consts
 from .errors import setup_error_handler
 from .gui.sveltekit_web import SveltekitWebDialog
@@ -26,4 +26,5 @@ def init() -> None:
     setup_error_handler()
     logger.debug("Hello world!", addon=consts.name)
     add_menu()
+    deckbrowser.init_hooks()
     sveltekit.init_server()
