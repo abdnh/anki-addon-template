@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Any
+
 from aqt.qt import QWidget
 
 from .. import sveltekit
@@ -19,3 +21,8 @@ class SveltekitWebDialog(sveltekit_web.SveltekitWebDialog):
             parent=parent,
             subtitle=subtitle,
         )
+
+    def on_bridge_command(self, message: str) -> Any:
+        if message == "hello":
+            return "Hello, world!"
+        return super().on_bridge_command(message)

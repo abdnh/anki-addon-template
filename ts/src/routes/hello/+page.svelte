@@ -1,5 +1,17 @@
+<script lang="ts">
+import { bridgeCommand } from "$lib/bridgecommand";
+import { onMount } from "svelte";
+
+let reply: string = "";
+onMount(() => {
+    bridgeCommand("hello", (message) => {
+        reply = message as string;
+    });
+});
+</script>
+
 <div class="container">
-    <h1>Hello world!</h1>
+    <h1>{reply}</h1>
 </div>
 
 <style>
