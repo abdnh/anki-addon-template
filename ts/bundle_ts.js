@@ -1,3 +1,4 @@
+import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -17,6 +18,7 @@ if (!moduleName) {
 
 await build({
     configFile: false,
+    plugins: [svelte()],
     build: {
         outDir: "../src/web/build/",
         emptyOutDir: false,
