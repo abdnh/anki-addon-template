@@ -1,12 +1,12 @@
 <script lang="ts">
     import {
-        getStats,
+        client,
         type GetStatsResponse,
         promiseWithResolver,
-        sayHello,
+        type SayHelloResponse,
     } from "$lib";
     import { bridgeCommand } from "$lib/bridgecommand";
-    import type { SayHelloResponse } from "$lib/generated/backend_pb";
+
     import { onMount } from "svelte";
 
     let bridgeReply: string = "";
@@ -21,8 +21,8 @@
         bridgeCommand("hello", (message) => {
             bridgeReply = message as string;
         });
-        getStats(1).then(resolveStats);
-        sayHello("World").then(resolveProtoReply);
+        client.getStats({ deckId: 1n }).then(resolveStats);
+        client.sayHello({ name: "World" }).then(resolveProtoReply);
     });
 </script>
 

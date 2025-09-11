@@ -18,14 +18,6 @@ const transport = createConnectTransport({
     },
 });
 
-const client = createClient(BackendService, transport);
+export const client = createClient(BackendService, transport);
 
-async function getStats(deckId: number): Promise<GetStatsResponse> {
-    return client.getStats({ deckId: BigInt(deckId) });
-}
-
-async function sayHello(name: string): Promise<SayHelloResponse> {
-    return client.sayHello({ name });
-}
-
-export { getStats, type GetStatsResponse, sayHello, type SayHelloResponse };
+export { type GetStatsResponse, type SayHelloResponse };
