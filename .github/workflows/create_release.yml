@@ -29,8 +29,11 @@ jobs:
             - name: Install dependencies
               run: .github/workflows/install_deps.sh
 
+            - name: Install just
+              uses: extractions/setup-just@v3
+
             - name: Create packages
-              run: make vendor && make ankiweb
+              run: just vendor && just ankiweb
 
             - name: Extract changes
               shell: bash
