@@ -9,12 +9,12 @@ from . import deckbrowser
 from .backend.server import init_server
 from .consts import consts
 from .errors import setup_error_handler
-from .gui.sveltekit_web import SveltekitWebDialog
+from .gui.hello import HelloWebDialog
 from .log import logger
 
 
 def on_action() -> None:
-    SveltekitWebDialog("hello", parent=mw, subtitle="Hello world!").show()
+    HelloWebDialog(parent=mw).show()
 
 
 def add_menu() -> None:

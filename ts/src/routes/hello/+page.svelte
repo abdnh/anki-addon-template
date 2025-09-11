@@ -1,21 +1,36 @@
 <script lang="ts">
-import { getStats, type GetStatsResponse, promiseWithResolver } from "$lib";
+import {
+    getStats,
+    type GetStatsResponse,
+    promiseWithResolver,
+    sayHello,
+} from "$lib";
 import { bridgeCommand } from "$lib/bridgecommand";
+import type { SayHelloResponse } from "$lib/generated/backend_pb";
 import { onMount } from "svelte";
 
-let reply: string = "";
+let bridgeReply: string = "";
 let [statsPromise, resolveStats] = promiseWithResolver<GetStatsResponse>();
+let [protoReplyPromise, resolveProtoReply] = promiseWithResolver<
+    SayHelloResponse
+>();
 
 onMount(() => {
     bridgeCommand("hello", (message) => {
-        reply = message as string;
+        bridgeReply = message as string;
     });
     getStats(1).then(resolveStats);
+    sayHello("World").then(resolveProtoReply);
 });
 </script>
 
 <div class="container">
-    <h1>{reply}</h1>
+    <div>Bridge reply: {bridgeReply}</div>
+    <div>
+        Proto reply: {#await protoReplyPromise}(Loading...){:then response}
+            {response.message}
+        {/await}
+    </div>
     <div class="stats-section">
         {#await statsPromise}
             <div class="loading">
@@ -53,16 +68,6 @@ onMount(() => {
     min-height: 89vh;
     padding: 2rem;
     gap: 2rem;
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: #333;
-    text-align: center;
-    margin: 0;
-    font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .stats-section {

@@ -81,7 +81,7 @@ wheels = [
 [[package]]
 name = "ankiscripts"
 version = "0.0.0"
-source = { git = "https://github.com/abdnh/ankiscripts?branch=master#12b59a896774a79b532becf9c96b1b316f3292b0" }
+source = { git = "https://github.com/abdnh/ankiscripts?branch=master#e6452578883f8a5bb0e8269d4de85544dd5ef200" }
 dependencies = [
     { name = "jsonschema" },
     { name = "libcst" },
@@ -96,8 +96,8 @@ forms = [
 
 [[package]]
 name = "ankiutils"
-version = "0.1.dev79+g254d8f39e"
-source = { git = "https://github.com/abdnh/ankiutils?branch=master#254d8f39ec02c67bd8fdd45dca6226319336ebed" }
+version = "0.1.dev82+g19fd2d8dc"
+source = { git = "https://github.com/abdnh/ankiutils?branch=master#19fd2d8dc48bf3f96eadf84a016e4d56815d43ae" }
 dependencies = [
     { name = "sentry-sdk" },
     { name = "structlog" },

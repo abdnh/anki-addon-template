@@ -1,14 +1,20 @@
 import { createClient } from "@connectrpc/connect";
 import { createConnectTransport } from "@connectrpc/connect-web";
 
-import { BackendService, type GetStatsResponse } from "./generated/backend_pb";
+import { BackendService, type GetStatsResponse, type SayHelloResponse } from "./generated/backend_pb";
 
 const transport = createConnectTransport({
     baseUrl: "/api",
     useBinaryFormat: true,
     fetch: (input, init) => {
-        console.log(init?.body, init?.headers);
-        return fetch(input, { ...init });
+        const headers = init?.headers ?? {};
+        return fetch(input, {
+            ...init,
+            headers: {
+                ...headers,
+                "qt-widget-id": window.qtWidgetId,
+            },
+        });
     },
 });
 
@@ -18,4 +24,8 @@ async function getStats(deckId: number): Promise<GetStatsResponse> {
     return client.getStats({ deckId: BigInt(deckId) });
 }
 
-export { getStats, type GetStatsResponse };
+async function sayHello(name: string): Promise<SayHelloResponse> {
+    return client.sayHello({ name });
+}
+
+export { getStats, type GetStatsResponse, sayHello, type SayHelloResponse };
