@@ -1,0 +1,19 @@
+syntax = "proto3";
+package ankiaddon.backend;
+
+service BackendService {
+  rpc GetStats(GetStatsRequest) returns (GetStatsResponse);
+}
+
+message GetStatsRequest {
+  int64 deck_id = 1;
+}
+
+message GetStatsResponse {
+  Stats stats = 1;
+}
+
+message Stats {
+  uint32 reviews = 1;
+  int64 time_spent = 2;
+}

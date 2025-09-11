@@ -4,7 +4,7 @@ from typing import Any
 
 from aqt.qt import QWidget
 
-from .. import sveltekit
+from ..backend.server import get_server
 from ..consts import consts
 from ..log import logger
 from ..vendor.ankiutils.gui import sveltekit_web
@@ -16,7 +16,7 @@ class SveltekitWebDialog(sveltekit_web.SveltekitWebDialog):
         super().__init__(
             consts=consts,
             logger=logger,
-            server=sveltekit.get_server(),
+            server=get_server(),
             path=path,
             parent=parent,
             subtitle=subtitle,

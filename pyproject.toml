@@ -13,7 +13,10 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 dynamic = ["version"]
-dependencies = ["ankiutils", "sentry-sdk>=1.14.0"]
+dependencies = [
+    "ankiutils",
+    "sentry-sdk>=1.14.0",
+]
 
 [tool.setuptools]
 package-dir = { "anki_addon_template" = "src" }
@@ -33,6 +36,7 @@ dev = [
     "pytest-cov>=6.1.1",
     "ruff>=0.11.7",
     "sentry-sdk>=1.14.0",
+    "types-protobuf",
 ]
 
 [project.urls]
@@ -47,6 +51,7 @@ extend-exclude = [
     "user_files",
     "build",
     "node_modules",
+    "proto",
 ]
 
 [tool.ruff.lint]
@@ -71,7 +76,7 @@ warn_unused_ignores = true
 check_untyped_defs = true
 disallow_untyped_defs = true
 strict_equality = true
-exclude = ["venv", "ankidata", "vendor", "user_files", "build"]
+exclude = ["venv", "ankidata", "vendor", "user_files", "build", "proto"]
 modules = ["src", "tests"]
 
 [[tool.mypy.overrides]]
