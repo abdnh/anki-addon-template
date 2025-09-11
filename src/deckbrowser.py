@@ -7,9 +7,7 @@ from aqt.webview import WebContent
 from .consts import consts
 
 
-def on_webview_will_set_content(
-    web_content: WebContent, context: object | None
-) -> None:
+def on_webview_will_set_content(web_content: WebContent, context: object | None) -> None:
     if isinstance(context, DeckBrowser):
         web_base = f"/_addons/{consts.module}/web/build"
         web_content.js.append(f"{web_base}/deckbrowser.js")
