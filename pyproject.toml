@@ -77,7 +77,7 @@ warn_unused_ignores = true
 check_untyped_defs = true
 disallow_untyped_defs = true
 strict_equality = true
-exclude = ["venv", "ankidata", "vendor", "user_files", "build"]
+exclude = ["vendor", "user_files"]
 modules = ["src", "tests"]
 
 [[tool.mypy.overrides]]
