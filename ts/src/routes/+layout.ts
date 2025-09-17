@@ -1,4 +1,4 @@
-import { checkNightMode } from "$lib/nightmode";
+import { checkNightMode } from "$lib/theme.svelte";
 import type { LayoutData } from "./$types";
 export const ssr = false;
 export const prerender = false;
