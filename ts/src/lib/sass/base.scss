@@ -1,0 +1,7 @@
+@import "bootstrap/scss/bootstrap-reboot";
+
+// TODO: use more granular imports
+@import "bootstrap/scss/bootstrap";
+
+$bootstrap-icons-font-dir: "bootstrap-icons/font/fonts";
+@import "bootstrap-icons/font/bootstrap-icons";
