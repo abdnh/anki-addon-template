@@ -37,7 +37,9 @@ jobs:
               run: just vendor && just ankiweb
 
             - name: Run checks
-              run: uv run -- pre-commit run --all-files
+              run: |
+                  uv run -- pre-commit run --all-files
+                  just ts-check
 
             - name: Run tests
               run: just test

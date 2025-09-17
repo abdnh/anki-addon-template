@@ -30,15 +30,26 @@ dprint:
 mypy:
 	-{{UV_RUN}} pre-commit run -a mypy
 
+# Run ts+svelte checks
+ts-check:
+  cd ts && npm run check && npm run lint
+
 # Fix formatting issues
 fix: ruff dprint
 
-# Run mypy and formatting checks
-lint: mypy ruff-check
+# Run mypy+formatting+ts checks
+lint: mypy ruff-check ts-check
 
 # Run pytest
-test:
-	{{UV_RUN}} python -m  pytest
+pytest:
+  {{UV_RUN}} python -m  pytest
+
+# Run ts tests
+ts-test:
+  cd ts && npm run test
+
+# Run pytest+ts tests
+test: pytest ts-test
 
 # Package source distribution
 sourcedist:
