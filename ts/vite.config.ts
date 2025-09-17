@@ -1,11 +1,11 @@
 import { sveltekit } from "@sveltejs/kit/vite";
 import { defineConfig } from "vite";
 
-function configureProxy(proxy: any, options: any) {
+function configureProxy(proxy: any, _options: any) {
     proxy.on("error", (err: any) => {
         console.log("proxy error", err);
     });
-    proxy.on("proxyReq", (proxyReq: any, req: any) => {
+    proxy.on("proxyReq", (_proxyReq: any, req: any) => {
         console.log("Sending Request to the Target:", req.method, req.url);
     });
     proxy.on("proxyRes", (proxyRes: any, req: any) => {
