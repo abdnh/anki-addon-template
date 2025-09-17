@@ -27,6 +27,11 @@ jobs:
               with:
                   python-version-file: ".python-version"
 
+            - name: Set up node
+              uses: actions/setup-node@v5
+              with:
+                  node-version: latest
+
             - name: Install dependencies
               run: .github/workflows/install_deps.sh
 
