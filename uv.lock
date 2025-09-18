@@ -83,7 +83,7 @@ wheels = [
 [[package]]
 name = "ankiscripts"
 version = "0.0.0"
-source = { git = "https://github.com/abdnh/ankiscripts?branch=master#caed670bb5845f8d746b8dc857310898e5ee0414" }
+source = { git = "https://github.com/abdnh/ankiscripts?branch=master#3be4056021a930e8fbe741599950ecc9e90c2733" }
 dependencies = [
     { name = "jsonschema" },
     { name = "libcst" },

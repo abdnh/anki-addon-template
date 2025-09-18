@@ -32,7 +32,7 @@ jobs:
                   node-version: latest
 
             - name: Install dependencies
-              run: .github/workflows/install_deps.sh
+              run: uv run -- python -m ankiscripts.install_ci_deps
 
             - name: Install just
               uses: extractions/setup-just@v3
