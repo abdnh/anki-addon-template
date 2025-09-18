@@ -15,6 +15,7 @@ echo "/usr/lib/llvm-20/bin" >> $GITHUB_PATH
 sudo apt install gcc-mingw-w64-x86-64
 echo "CC=x86_64-w64-mingw32-gcc" >> $GITHUB_ENV
 # Protobuf generation
-curl -L -o protoc.zip "https://github.com/protocolbuffers/protobuf/releases/download/v32.1/protoc-32.1-linux-x86_64.zip"
+protobuf_version=$(uv tree --package protobuf | grep "protobuf v" | sed 's/protobuf v[0-9]*\.\([0-9]*\.[0-9]*\)/\1/')
+curl -L -o protoc.zip "https://github.com/protocolbuffers/protobuf/releases/download/v${protobuf_version}/protoc-${protobuf_version}-linux-x86_64.zip"
 unzip protoc.zip -d protoc
 echo protoc/bin >> $GITHUB_PATH
