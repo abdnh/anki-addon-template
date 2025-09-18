@@ -33,6 +33,7 @@ name = "anki-addon-template"
 source = { editable = "." }
 dependencies = [
     { name = "ankiutils" },
+    { name = "protobuf" },
     { name = "sentry-sdk" },
 ]
 
@@ -53,6 +54,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "ankiutils", git = "https://github.com/abdnh/ankiutils?branch=master" },
+    { name = "protobuf" },
     { name = "sentry-sdk", specifier = ">=1.14.0" },
 ]
 
@@ -81,7 +83,7 @@ wheels = [
 [[package]]
 name = "ankiscripts"
 version = "0.0.0"
-source = { git = "https://github.com/abdnh/ankiscripts?branch=master#b88460e3a9006b949c46041b59488a5b673a5676" }
+source = { git = "https://github.com/abdnh/ankiscripts?branch=master#caed670bb5845f8d746b8dc857310898e5ee0414" }
 dependencies = [
     { name = "jsonschema" },
     { name = "libcst" },
