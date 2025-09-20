@@ -83,7 +83,7 @@ wheels = [
 [[package]]
 name = "ankiscripts"
 version = "0.0.0"
-source = { git = "https://github.com/abdnh/ankiscripts?branch=master#3be4056021a930e8fbe741599950ecc9e90c2733" }
+source = { git = "https://github.com/abdnh/ankiscripts?branch=master#d8811fb15cb89fedc30ade608de89dbcd3e117dc" }
 dependencies = [
     { name = "jsonschema" },
     { name = "libcst" },
@@ -91,6 +91,8 @@ dependencies = [
     { name = "pip" },
     { name = "protoletariat" },
     { name = "questionary" },
+    { name = "tomli" },
+    { name = "vermin" },
 ]
 
 [package.optional-dependencies]
@@ -1591,6 +1593,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz", hash = "sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760", size = 393185, upload-time = "2025-06-18T14:07:41.644Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl", hash = "sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc", size = 129795, upload-time = "2025-06-18T14:07:40.39Z" },
+]
+
+[[package]]
+name = "vermin"
+version = "1.6.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3d/26/7b871396c33006c445c25ef7da605ecbd6cef830d577b496d2b73a554f9d/vermin-1.6.0.tar.gz", hash = "sha256:6266ca02f55d1c2aa189a610017c132eb2d1934f09e72a955b1eb3820ee6d4ef", size = 93181, upload-time = "2023-11-25T20:58:25.406Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2e/98/1a2ca43e6d646421eea16ec19977e2e6d1ea9079bd9d873bfae513d43f1c/vermin-1.6.0-py2.py3-none-any.whl", hash = "sha256:f1fa9ee40f59983dc40e0477eb2b1fa8061a3df4c3b2bcf349add462a5610efb", size = 90845, upload-time = "2023-11-25T20:58:22.69Z" },
 ]
 
 [[package]]
