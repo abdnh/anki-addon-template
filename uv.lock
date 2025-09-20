@@ -102,11 +102,12 @@ forms = [
 
 [[package]]
 name = "ankiutils"
-version = "0.1.dev86+g726c17fe2"
-source = { git = "https://github.com/abdnh/ankiutils?branch=master#726c17fe2f2913a4862acf709f6279ceebf83e35" }
+version = "0.1.dev89+gf34ad45c9"
+source = { git = "https://github.com/abdnh/ankiutils?branch=master#f34ad45c9fa328d59bfe0560411211310a073e89" }
 dependencies = [
     { name = "sentry-sdk" },
     { name = "structlog" },
+    { name = "typing-extensions" },
 ]
 
 [[package]]
