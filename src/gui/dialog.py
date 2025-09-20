@@ -1,4 +1,4 @@
-from typing import Optional
+from __future__ import annotations
 
 from aqt.qt import Qt, QWidget
 
@@ -9,7 +9,7 @@ from ..vendor.ankiutils.gui import dialog
 class Dialog(dialog.Dialog):
     def __init__(
         self,
-        parent: Optional[QWidget] = None,
+        parent: QWidget | None = None,
         flags: Qt.WindowType = Qt.WindowType.Dialog,
         subtitle: str = "",
     ) -> None:
