@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from ..consts import consts
 from ..log import logger
 from ..proto.routes import add_api_routes
