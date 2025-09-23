@@ -15,7 +15,6 @@ classifiers = [
 dynamic = ["version"]
 dependencies = [
     "ankiutils",
-    "sentry-sdk>=1.14.0",
     "protobuf",
 ]
 
