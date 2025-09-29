@@ -48,6 +48,12 @@ repos:
             language: system
             types: [python]
             require_serial: true
+          - id: ts-check
+            name: ts-check
+            entry: just ts-check
+            language: system
+            types: [javascript, ts, svelte]
+            require_serial: true
 
 ci:
     autoupdate_schedule: weekly
