@@ -34,7 +34,6 @@ source = { editable = "." }
 dependencies = [
     { name = "ankiutils" },
     { name = "protobuf" },
-    { name = "sentry-sdk" },
 ]
 
 [package.dev-dependencies]
@@ -55,7 +54,6 @@ dev = [
 requires-dist = [
     { name = "ankiutils", git = "https://github.com/abdnh/ankiutils?branch=master" },
     { name = "protobuf" },
-    { name = "sentry-sdk", specifier = ">=1.14.0" },
 ]
 
 [package.metadata.requires-dev]
@@ -83,7 +81,7 @@ wheels = [
 [[package]]
 name = "ankiscripts"
 version = "0.0.0"
-source = { git = "https://github.com/abdnh/ankiscripts?branch=master#d8811fb15cb89fedc30ade608de89dbcd3e117dc" }
+source = { git = "https://github.com/abdnh/ankiscripts?branch=master#084467a28f0e571c5a54cbbef925d90e89767f41" }
 dependencies = [
     { name = "jsonschema" },
     { name = "libcst" },
