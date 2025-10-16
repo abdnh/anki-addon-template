@@ -100,8 +100,8 @@ forms = [
 
 [[package]]
 name = "ankiutils"
-version = "0.1.dev91+g785d48aaa"
-source = { git = "https://github.com/abdnh/ankiutils?branch=master#785d48aaa52615ec13426a14ecae00445005459b" }
+version = "0.1.dev92+g0eb8a6e18"
+source = { git = "https://github.com/abdnh/ankiutils?branch=master#0eb8a6e18c320831a4275c4a7bfaefa3ef0fec13" }
 dependencies = [
     { name = "sentry-sdk" },
     { name = "structlog" },
