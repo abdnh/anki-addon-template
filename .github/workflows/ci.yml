@@ -30,7 +30,7 @@ jobs:
             - name: Set up node
               uses: actions/setup-node@v5
               with:
-                  node-version: latest
+                  node-version: 24
 
             - name: Install dependencies
               run: uv run -- python -m ankiscripts.install_ci_deps
