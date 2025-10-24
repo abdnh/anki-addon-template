@@ -42,12 +42,6 @@ repos:
             entry: dprint fmt --allow-no-files
             language: system
             require_serial: true
-          - id: vermin
-            name: vermin
-            entry: python -m ankiscripts.vermin
-            language: system
-            types: [python]
-            require_serial: true
           - id: ts-check
             name: ts-check
             entry: just ts-check
