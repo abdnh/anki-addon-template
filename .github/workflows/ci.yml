@@ -79,7 +79,6 @@ jobs:
             fail-fast: false
             matrix:
                 include: ${{ fromJson(needs.get-versions.outputs.matrix) }}
-
         steps:
             - name: Checkout
               uses: actions/checkout@v3
@@ -105,12 +104,18 @@ jobs:
 
             - name: Install dependencies
               run: uv run -- python -m ankiscripts.install_ci_deps
+              env:
+                  UV_PYTHON: ${{ matrix.python }}
 
             - name: Install just
               uses: extractions/setup-just@v3
 
             - name: Build
               run: just vendor && just ankiweb
+              env:
+                  UV_PYTHON: ${{ matrix.python }}
 
             - name: Run tests
               run: uv run python -m  pytest
+              env:
+                  UV_PYTHON: ${{ matrix.python }}
