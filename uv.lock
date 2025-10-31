@@ -60,7 +60,7 @@ requires-dist = [
 dev = [
     { name = "ankiscripts", extras = ["forms"], git = "https://github.com/abdnh/ankiscripts?branch=master" },
     { name = "ankiutils", git = "https://github.com/abdnh/ankiutils?branch=master" },
-    { name = "aqt", extras = ["qt"], specifier = ">=25.2.4" },
+    { name = "aqt", extras = ["qt"] },
     { name = "mypy", specifier = ">=1.15.0" },
     { name = "pre-commit", specifier = ">=4.2.0" },
     { name = "pytest", specifier = ">=8.3.5" },
@@ -81,7 +81,7 @@ wheels = [
 [[package]]
 name = "ankiscripts"
 version = "0.0.0"
-source = { git = "https://github.com/abdnh/ankiscripts?branch=master#1fd5d58d018af536ffed0a45c9bf524cf2304334" }
+source = { git = "https://github.com/abdnh/ankiscripts?branch=master#e369fabd623a15a1eac6f6c23a9556aa7ea7bd5f" }
 dependencies = [
     { name = "jsonschema" },
     { name = "libcst" },
