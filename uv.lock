@@ -81,7 +81,7 @@ wheels = [
 [[package]]
 name = "ankiscripts"
 version = "0.0.0"
-source = { git = "https://github.com/abdnh/ankiscripts?branch=master#084467a28f0e571c5a54cbbef925d90e89767f41" }
+source = { git = "https://github.com/abdnh/ankiscripts?branch=master#1fd5d58d018af536ffed0a45c9bf524cf2304334" }
 dependencies = [
     { name = "jsonschema" },
     { name = "libcst" },
@@ -89,7 +89,9 @@ dependencies = [
     { name = "pip" },
     { name = "protoletariat" },
     { name = "questionary" },
+    { name = "requests" },
     { name = "tomli" },
+    { name = "types-requests" },
     { name = "vermin" },
 ]
 
@@ -100,8 +102,8 @@ forms = [
 
 [[package]]
 name = "ankiutils"
-version = "0.1.dev92+g0eb8a6e18"
-source = { git = "https://github.com/abdnh/ankiutils?branch=master#0eb8a6e18c320831a4275c4a7bfaefa3ef0fec13" }
+version = "0.1.dev93+gf2bb740a8"
+source = { git = "https://github.com/abdnh/ankiutils?branch=master#f2bb740a8c87e1b1b17b7545155e1aa68e4847dc" }
 dependencies = [
     { name = "sentry-sdk" },
     { name = "structlog" },
@@ -1579,6 +1581,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/61/68/0c7144be5c6dc16538e79458839fc914ea494481c7e64566de4ecc0c3682/types_protobuf-6.30.2.20250822.tar.gz", hash = "sha256:faacbbe87bd8cba4472361c0bd86f49296bd36f7761e25d8ada4f64767c1bde9", size = 62379, upload-time = "2025-08-22T03:01:56.572Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/52/64/b926a6355993f712d7828772e42b9ae942f2d306d25072329805c374e729/types_protobuf-6.30.2.20250822-py3-none-any.whl", hash = "sha256:5584c39f7e36104b5f8bdfd31815fa1d5b7b3455a79ddddc097b62320f4b1841", size = 76523, upload-time = "2025-08-22T03:01:55.157Z" },
+]
+
+[[package]]
+name = "types-requests"
+version = "2.32.4.20250913"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/36/27/489922f4505975b11de2b5ad07b4fe1dca0bca9be81a703f26c5f3acfce5/types_requests-2.32.4.20250913.tar.gz", hash = "sha256:abd6d4f9ce3a9383f269775a9835a4c24e5cd6b9f647d64f88aa4613c33def5d", size = 23113, upload-time = "2025-09-13T02:40:02.309Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2a/20/9a227ea57c1285986c4cf78400d0a91615d25b24e257fd9e2969606bdfae/types_requests-2.32.4.20250913-py3-none-any.whl", hash = "sha256:78c9c1fffebbe0fa487a418e0fa5252017e9c60d1a2da394077f1780f655d7e1", size = 20658, upload-time = "2025-09-13T02:40:01.115Z" },
 ]
 
 [[package]]
