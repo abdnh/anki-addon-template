@@ -100,7 +100,7 @@ jobs:
                   node-version: 24
 
             - name: Install Anki ${{ matrix.anki }}
-              run: uv add aqt[qt,qt6]==${{ matrix.anki }}
+              run: uv add --dev aqt[qt,qt6]==${{ matrix.anki }}
 
             - name: Install dependencies
               run: uv run -- python -m ankiscripts.install_ci_deps
