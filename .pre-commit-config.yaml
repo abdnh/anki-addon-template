@@ -2,23 +2,59 @@ exclude: ".venv|vendor|build"
 default_stages: [pre-commit]
 
 repos:
-    - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: v4.4.0
-      hooks:
-          - id: trailing-whitespace
-          - id: end-of-file-fixer
-          - id: check-json
-            exclude: "(.vscode(.dist)?/.*|tsconfig.json)"
-          - id: check-yaml
-          - id: check-builtin-literals
-          - id: check-case-conflict
-          - id: check-docstring-first
-          - id: check-shebang-scripts-are-executable
-          - id: mixed-line-ending
-          - id: detect-private-key
-
     - repo: local
       hooks:
+          - id: trailing-whitespace
+            name: trailing-whitespace
+            language: system
+            types: [text]
+            entry: uv run trailing-whitespace-fixer
+          - id: end-of-file-fixer
+            name: end-of-file-fixer
+            language: system
+            types: [text]
+            entry: uv run end-of-file-fixer
+          - id: check-json
+            name: check-json
+            language: system
+            types: [json]
+            exclude: "(.vscode(.dist)?/.*|tsconfig.json)"
+            entry: uv run check-json
+          - id: check-yaml
+            name: check-yaml
+            language: system
+            types: [yaml]
+            entry: uv run check-yaml
+          - id: check-builtin-literals
+            name: check-builtin-literals
+            language: system
+            types: [python]
+            entry: uv run check-builtin-literals
+          - id: check-case-conflict
+            name: check-case-conflict
+            language: system
+            types: [python]
+            entry: uv run check-case-conflict
+          - id: check-docstring-first
+            name: check-docstring-first
+            language: system
+            types: [python]
+            entry: uv run check-docstring-first
+          - id: check-shebang-scripts-are-executable
+            name: check-shebang-scripts-are-executable
+            language: system
+            types: [text]
+            entry: uv run check-shebang-scripts-are-executable
+          - id: mixed-line-ending
+            name: mixed-line-ending
+            language: system
+            types: [text]
+            entry: uv run mixed-line-ending
+          - id: detect-private-key
+            name: detect-private-key
+            language: system
+            types: [text]
+            entry: uv run detect-private-key
           - id: mypy
             name: mypy
             entry: python -m mypy

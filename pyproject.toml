@@ -32,12 +32,16 @@ dev = [
     "aqt[qt]",
     "mypy>=1.15.0",
     "pre-commit>=4.2.0",
+    "pre-commit-hooks>=6.0.0",
     "pytest>=8.3.5",
     "pytest-cov>=6.1.1",
     "ruff>=0.11.7",
     "sentry-sdk>=1.14.0",
     "types-protobuf",
 ]
+
+[tool.uv]
+constraint-dependencies = ["ruamel.yaml<0.19.0"]
 
 [project.urls]
 Repository = "https://github.com/abdnh/anki-addon-template"
