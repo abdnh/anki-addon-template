@@ -9,7 +9,11 @@ function configureProxy(proxy: any, _options: any) {
         console.log("Sending Request to the Target:", req.method, req.url);
     });
     proxy.on("proxyRes", (proxyRes: any, req: any) => {
-        console.log("Received Response from the Target:", proxyRes.statusCode, req.url);
+        console.log(
+            "Received Response from the Target:",
+            proxyRes.statusCode,
+            req.url,
+        );
     });
 }
 
@@ -30,6 +34,7 @@ export default defineConfig({
         ],
     },
     server: {
+        host: "127.0.0.1",
         port: 5174,
         proxy: {
             "/api": {
@@ -43,7 +48,11 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                silenceDeprecations: ["color-functions", "global-builtin", "import"],
+                silenceDeprecations: [
+                    "color-functions",
+                    "global-builtin",
+                    "import",
+                ],
             },
         },
     },
