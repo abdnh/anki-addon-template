@@ -24,8 +24,7 @@ def add_menu() -> None:
 
 
 def init() -> None:
-    setup_error_handler()
-    logger.debug("Hello world!", addon=consts.name)
+    setup_error_handler(lambda: logger.info("Hello world!", addon=consts.name))
     add_menu()
     deckbrowser.init_hooks()
     init_server()

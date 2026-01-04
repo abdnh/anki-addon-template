@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import atexit
 import logging
+from typing import Callable
 
 from anki.hooks import wrap
 from aqt import gui_hooks, mw
@@ -14,12 +15,14 @@ from .vendor.ankiutils import errors
 REGISTERED_ERROR_HANDLER = False
 
 
-def _on_profile_did_open() -> None:
+def _on_profile_did_open(on_done: Callable | None = None) -> None:
     global REGISTERED_ERROR_HANDLER
 
     if not REGISTERED_ERROR_HANDLER:
         errors.setup_error_handler(consts, config, logger)
         REGISTERED_ERROR_HANDLER = True
+    if on_done:
+        on_done()
 
 
 def _before_exit() -> None:
@@ -29,8 +32,8 @@ def _before_exit() -> None:
     logging.shutdown()
 
 
-def setup_error_handler() -> None:
-    gui_hooks.profile_did_open.append(_on_profile_did_open)
+def setup_error_handler(on_done: Callable | None = None) -> None:
+    gui_hooks.profile_did_open.append(lambda: _on_profile_did_open(on_done))
     mw.cleanupAndExit = wrap(mw.cleanupAndExit, _before_exit, "before")  # type: ignore
 
 
