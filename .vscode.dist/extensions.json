@@ -4,6 +4,7 @@
         "matangover.mypy",
         "charliermarsh.ruff",
         "dprint.dprint",
+        "DrBlury.protobuf-vsc",
         "abdo.ankiwebify"
     ]
 }
