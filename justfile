@@ -3,12 +3,12 @@ default: zip
 UV_RUN := "uv run --"
 
 # Package add-on for AnkiWeb
-ankiweb:
-	{{UV_RUN}} python -m ankiscripts.build --type ankiweb --qt all --exclude user_files/**/*
+ankiweb args='':
+	{{UV_RUN}} python -m ankiscripts.build --type ankiweb --qt all --exclude user_files/**/* {{args}}
 
 # Package add-on for distribution outside of AnkiWeb
-zip:
-	{{UV_RUN}} python -m ankiscripts.build --type package --qt all --exclude user_files/**/*
+zip args='':
+	{{UV_RUN}} python -m ankiscripts.build --type package --qt all --exclude user_files/**/* {{args}}
 
 # Install dependencies to src/vendor
 vendor:
