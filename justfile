@@ -32,7 +32,8 @@ mypy:
 
 # Run ts+svelte checks
 ts-check:
-  cd ts && npm run check && npm run lint
+  {{ if path_exists("ts") == "true" { "cd ts && npm run check && npm run lint" } else { "" } }}
+
 
 # Fix formatting issues
 fix: ruff dprint
@@ -46,7 +47,8 @@ pytest:
 
 # Run ts tests
 ts-test:
-  cd ts && npm run test
+  {{ if path_exists("ts") == "true" { "cd ts && npm run test" } else { "" } }}
+
 
 # Run pytest+ts tests
 test: pytest ts-test
