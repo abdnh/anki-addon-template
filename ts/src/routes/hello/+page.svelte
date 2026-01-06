@@ -4,7 +4,11 @@
         type GetStatsResponse,
         type SayHelloResponse,
     } from "$lib";
-    import { bridgeCommand, promiseWithResolver } from "ankiutils";
+    import {
+        bridgeCommand,
+        promiseWithResolver,
+        Spinner,
+    } from "ankiutils";
 
     import { onMount } from "svelte";
 
@@ -35,7 +39,7 @@
     <div class="stats-section">
         {#await statsPromise}
             <div class="loading">
-                <p>Loading stats...</p>
+                <Spinner />
             </div>
         {:then response}
             <div class="stats-container">
