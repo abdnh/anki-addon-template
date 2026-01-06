@@ -1,4 +1,4 @@
-import { checkNightMode } from "$lib/theme.svelte";
+import { checkNightMode } from "ankiutils";
 import type { LayoutData } from "./$types";
 export const ssr = false;
 export const prerender = false;

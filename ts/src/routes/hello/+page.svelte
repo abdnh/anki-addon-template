@@ -2,10 +2,9 @@
     import {
         client,
         type GetStatsResponse,
-        promiseWithResolver,
         type SayHelloResponse,
     } from "$lib";
-    import { bridgeCommand } from "$lib/bridgecommand";
+    import { bridgeCommand, promiseWithResolver } from "ankiutils";
 
     import { onMount } from "svelte";
 
