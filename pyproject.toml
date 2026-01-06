@@ -8,10 +8,10 @@ authors = [{ name = "Abdo", email = "abdo@abdnh.net" }]
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
-    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
+license = "AGPL-3.0-or-later"
 dynamic = ["version"]
 dependencies = [
     "ankiutils",
