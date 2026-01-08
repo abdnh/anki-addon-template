@@ -1,4 +1,5 @@
 import { sveltekit } from "@sveltejs/kit/vite";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 
 function configureProxy(proxy: any, _options: any) {
@@ -18,7 +19,7 @@ function configureProxy(proxy: any, _options: any) {
 }
 
 export default defineConfig({
-    plugins: [sveltekit()],
+    plugins: [tailwindcss(), sveltekit()],
     test: {
         expect: { requireAssertions: true },
         projects: [
