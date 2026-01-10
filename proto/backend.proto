@@ -17,8 +17,8 @@ message GetStatsResponse {
 }
 
 message Stats {
-  uint32 reviews = 1;
-  int64 time_spent = 2;
+  uint32 reviews    = 1;
+  int64  time_spent = 2;
 }
 
 message SayHelloRequest {

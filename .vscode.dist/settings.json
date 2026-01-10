@@ -6,6 +6,9 @@
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
+    "[proto]": {
+        "editor.defaultFormatter": "DrBlury.protobuf-vsc"
+    },
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
     },
