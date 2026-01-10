@@ -1,5 +1,7 @@
 default: zip
 
+set windows-shell := ["pwsh", "-c"]
+
 UV_RUN := "uv run --"
 
 # Package add-on for AnkiWeb
