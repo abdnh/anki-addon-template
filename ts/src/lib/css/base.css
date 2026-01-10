@@ -2,3 +2,4 @@
 @plugin "daisyui" {
     themes: cmyk --default, dark --prefersdark;
 }
+@source "../../../node_modules/ankiutils";
