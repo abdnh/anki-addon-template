@@ -57,25 +57,25 @@ repos:
             entry: uv run detect-private-key
           - id: mypy
             name: mypy
-            entry: python -m mypy
-            language: system
-            types: [python]
-            require_serial: true
-          - id: ruff-check
-            name: ruff
-            entry: ruff check --force-exclude --fix
+            entry: just mypy --
             language: system
             types: [python]
             require_serial: true
           - id: ruff-format
-            name: ruff
-            entry: ruff format --force-exclude
+            name: ruff-format
+            entry: just ruff
+            language: system
+            types: [python]
+            require_serial: true
+          - id: ruff-check
+            name: ruff-check
+            entry: just ruff-check
             language: system
             types: [python]
             require_serial: true
           - id: dprint
             name: dprint
-            entry: dprint fmt --allow-no-files
+            entry: just dprint
             language: system
             require_serial: true
           - id: ts-check

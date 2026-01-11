@@ -17,27 +17,27 @@ vendor:
 	{{UV_RUN}} python -m ankiscripts.vendor
 
 # Format using Ruff
-ruff:
-	{{UV_RUN}} pre-commit run -a ruff-format
+ruff *files:
+	{{UV_RUN}} ruff format --force-exclude {{files}}
 
-# Check formatting using Ruff
-ruff-check:
-	{{UV_RUN}} ruff check
+# Check formatting and lints using Ruff
+ruff-check *files:
+	{{UV_RUN}} ruff check --force-exclude --fix {{files}}
 
 # Format using dprint
-dprint:
-	{{UV_RUN}} pre-commit run -a dprint
+dprint *files:
+	dprint fmt --allow-no-files {{files}}
 
 # Check type hints using mypy
-mypy:
-	-{{UV_RUN}} pre-commit run -a mypy
+mypy *files:
+	{{UV_RUN}} mypy {{files}}
 
 # Run ts+svelte checks
 ts-check:
   {{ if path_exists("ts") == "true" { "cd ts && npm run check && npm run lint" } else { "" } }}
 
 # Check proto files for formatting issues
-proto-check:
+proto-check *files:
   {{ if path_exists("ts") == "true" { "cd ts && npm run check_proto" } else { "" } }}
 
 # Format proto files
