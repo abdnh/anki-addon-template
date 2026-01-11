@@ -9,6 +9,7 @@
     "[proto]": {
         "editor.defaultFormatter": "DrBlury.protobuf-vsc"
     },
+    "protobuf.formatter.preset": "buf",
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
     },

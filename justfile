@@ -36,12 +36,19 @@ mypy:
 ts-check:
   {{ if path_exists("ts") == "true" { "cd ts && npm run check && npm run lint" } else { "" } }}
 
+# Check proto files for formatting issues
+proto-check:
+  {{ if path_exists("ts") == "true" { "cd ts && npm run check_proto" } else { "" } }}
+
+# Format proto files
+proto:
+  {{ if path_exists("ts") == "true" { "cd ts && npm run format_proto" } else { "" } }}
 
 # Fix formatting issues
-fix: ruff dprint
+fix: ruff dprint proto
 
-# Run mypy+formatting+ts checks
-lint: mypy ruff-check ts-check
+# Run mypy+formatting+ts+proto checks
+lint: mypy ruff-check ts-check proto-check
 
 # Run pytest
 pytest:

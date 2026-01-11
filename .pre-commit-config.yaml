@@ -84,6 +84,12 @@ repos:
             language: system
             types: [javascript, ts, svelte]
             require_serial: true
+          - id: proto-check
+            name: proto-check
+            entry: just proto-check
+            language: system
+            types: [proto]
+            require_serial: true
 
 ci:
     autoupdate_schedule: weekly

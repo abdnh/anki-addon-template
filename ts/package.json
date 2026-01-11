@@ -13,7 +13,9 @@
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
         "lint": "eslint .",
         "test:unit": "vitest",
-        "test": "npm run test:unit -- --run"
+        "test": "npm run test:unit -- --run",
+        "check_proto": "buf format --exit-code ../proto",
+        "format_proto": "buf format -w ../proto"
     },
     "devDependencies": {
         "@bufbuild/buf": "^1.57.0",
