@@ -1,9 +1,5 @@
 <script lang="ts">
-    import {
-        client,
-        type GetStatsResponse,
-        type SayHelloResponse,
-    } from "$lib";
+    import { client, type GetStatsResponse, type SayHelloResponse } from "$lib";
     import { bridgeCommand, promiseWithResolver } from "ankiutils";
 
     import { onMount } from "svelte";
