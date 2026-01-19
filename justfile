@@ -33,7 +33,7 @@ mypy *files:
 	{{UV_RUN}} mypy {{files}}
 
 # Run ts+svelte checks
-ts-check:
+ts-check *files:
   {{ if path_exists("ts") == "true" { "cd ts && npm run check && npm run lint" } else { "" } }}
 
 # Check proto files for formatting issues

@@ -82,7 +82,7 @@ repos:
             name: ts-check
             entry: just ts-check
             language: system
-            types: [javascript, ts, svelte]
+            types_or: [javascript, ts, svelte]
             require_serial: true
           - id: proto-check
             name: proto-check
