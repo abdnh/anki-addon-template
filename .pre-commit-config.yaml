@@ -2,94 +2,49 @@ exclude: ".venv|vendor|build"
 default_stages: [pre-commit]
 
 repos:
-    - repo: local
+    - repo: builtin
       hooks:
           - id: trailing-whitespace
-            name: trailing-whitespace
-            language: system
-            types: [text]
-            entry: uv run trailing-whitespace-fixer
           - id: end-of-file-fixer
-            name: end-of-file-fixer
-            language: system
-            types: [text]
-            entry: uv run end-of-file-fixer
           - id: check-json
-            name: check-json
-            language: system
-            types: [json]
             exclude: "(.vscode(.dist)?/.*|tsconfig.json)"
-            entry: uv run check-json
           - id: check-yaml
-            name: check-yaml
-            language: system
-            types: [yaml]
-            entry: uv run check-yaml
-          - id: check-builtin-literals
-            name: check-builtin-literals
-            language: system
-            types: [python]
-            entry: uv run check-builtin-literals
+          - id: check-toml
           - id: check-case-conflict
-            name: check-case-conflict
-            language: system
-            types: [python]
-            entry: uv run check-case-conflict
-          - id: check-docstring-first
-            name: check-docstring-first
-            language: system
-            types: [python]
-            entry: uv run check-docstring-first
-          - id: check-shebang-scripts-are-executable
-            name: check-shebang-scripts-are-executable
-            language: system
-            types: [text]
-            entry: uv run check-shebang-scripts-are-executable
+          - id: check-executables-have-shebangs
           - id: mixed-line-ending
-            name: mixed-line-ending
-            language: system
-            types: [text]
-            entry: uv run mixed-line-ending
           - id: detect-private-key
-            name: detect-private-key
-            language: system
-            types: [text]
-            entry: uv run detect-private-key
+    - repo: local
+      hooks:
           - id: mypy
             name: mypy
             entry: just mypy --
             language: system
             types: [python]
-            require_serial: true
           - id: ruff-format
             name: ruff-format
             entry: just ruff
             language: system
             types: [python]
-            require_serial: true
           - id: ruff-check
             name: ruff-check
             entry: just ruff-check
             language: system
             types: [python]
-            require_serial: true
           - id: dprint
             name: dprint
             entry: just dprint
             language: system
-            require_serial: true
           - id: ts-check
             name: ts-check
             entry: just ts-check
             language: system
             types_or: [javascript, ts, svelte]
-            require_serial: true
           - id: proto-check
             name: proto-check
             entry: just proto-check
             language: system
             types: [proto]
-            require_serial: true
 
 ci:
     autoupdate_schedule: weekly
