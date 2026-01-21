@@ -6,6 +6,7 @@ from typing import Callable
 
 from anki.hooks import wrap
 from aqt import gui_hooks, mw
+from aqt.qt import QWidget
 
 from .config import config
 from .consts import consts
@@ -40,10 +41,12 @@ def setup_error_handler(on_done: Callable | None = None) -> None:
 
 
 def report_exception_and_upload_logs(
-    exception: BaseException, on_done: Callable[[str | None], None] | None = None
+    parent: QWidget, exception: BaseException, on_success: Callable[[str | None], None] | None = None
 ) -> None:
-    errors.report_exception_and_upload_logs_in_background(exception=exception, args=ARGS, on_done=on_done)
+    errors.report_exception_and_upload_logs_op(
+        parent=parent, exception=exception, args=ARGS, on_success=on_success
+    ).run_in_background()
 
 
-def upload_logs(on_done: Callable[[LogsUpload | None], None] | None = None) -> None:
-    errors.upload_logs_in_background(args=ARGS, on_done=on_done)
+def upload_logs(parent: QWidget, on_success: Callable[[LogsUpload | None], None] | None = None) -> None:
+    errors.upload_logs_op(parent=parent, args=ARGS, on_success=on_success).run_in_background()
