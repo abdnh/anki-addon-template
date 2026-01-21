@@ -11,15 +11,17 @@ from .config import config
 from .consts import consts
 from .log import logger
 from .vendor.ankiutils import errors
+from .vendor.ankiutils.errors import ErrorReportingArgs, LogsUpload
 
 REGISTERED_ERROR_HANDLER = False
+ARGS = ErrorReportingArgs(consts=consts, config=config, logger=logger)
 
 
 def _on_profile_did_open(on_done: Callable | None = None) -> None:
     global REGISTERED_ERROR_HANDLER
 
     if not REGISTERED_ERROR_HANDLER:
-        errors.setup_error_handler(consts, config, logger)
+        errors.setup_error_handler(ARGS)
         REGISTERED_ERROR_HANDLER = True
     if on_done:
         on_done()
@@ -37,5 +39,11 @@ def setup_error_handler(on_done: Callable | None = None) -> None:
     mw.cleanupAndExit = wrap(mw.cleanupAndExit, _before_exit, "before")  # type: ignore
 
 
-def report_exception_and_upload_logs(exception: BaseException) -> str | None:
-    return errors.report_exception_and_upload_logs(exception, consts, config, logger)
+def report_exception_and_upload_logs(
+    exception: BaseException, on_done: Callable[[str | None], None] | None = None
+) -> None:
+    errors.report_exception_and_upload_logs_in_background(exception=exception, args=ARGS, on_done=on_done)
+
+
+def upload_logs(on_done: Callable[[LogsUpload | None], None] | None = None) -> None:
+    errors.upload_logs_in_background(args=ARGS, on_done=on_done)
