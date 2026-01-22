@@ -13,6 +13,7 @@ from .consts import consts
 from .log import logger
 from .vendor.ankiutils import errors
 from .vendor.ankiutils.errors import ErrorReportingArgs, LogsUpload
+from .vendor.ankiutils.gui.errors import upload_logs_and_notify_user as upload_logs_and_notify_user_base
 
 REGISTERED_ERROR_HANDLER = False
 ARGS = ErrorReportingArgs(consts=consts, config=config, logger=logger)
@@ -50,3 +51,7 @@ def report_exception_and_upload_logs(
 
 def upload_logs(parent: QWidget, on_success: Callable[[LogsUpload | None], None] | None = None) -> None:
     errors.upload_logs_op(parent=parent, args=ARGS, on_success=on_success).run_in_background()
+
+
+def upload_logs_and_notify_user(parent: QWidget) -> None:
+    upload_logs_and_notify_user_base(parent=parent, args=ARGS)
