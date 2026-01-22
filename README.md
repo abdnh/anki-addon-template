@@ -20,6 +20,8 @@ Anki add-on template for my projects.
 
 [BEGINNING OF TEMPLATE]
 
+See [docs](./docs/src/intro.md) for usage.
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for a list of changes.
