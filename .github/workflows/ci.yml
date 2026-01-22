@@ -15,10 +15,7 @@ jobs:
             matrix: ${{ steps.set-matrix.outputs.matrix }}
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
-              with:
-                  submodules: recursive
-                  fetch-depth: 0
+              uses: actions/checkout@v6
 
             - name: Install uv
               uses: astral-sh/setup-uv@v5
@@ -39,10 +36,7 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
-              with:
-                  submodules: recursive
-                  fetch-depth: 0
+              uses: actions/checkout@v6
 
             - name: Install uv
               uses: astral-sh/setup-uv@v5
@@ -81,10 +75,7 @@ jobs:
                 include: ${{ fromJson(needs.get-versions.outputs.matrix) }}
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
-              with:
-                  submodules: recursive
-                  fetch-depth: 0
+              uses: actions/checkout@v6
 
             - name: Install uv
               uses: astral-sh/setup-uv@v5
