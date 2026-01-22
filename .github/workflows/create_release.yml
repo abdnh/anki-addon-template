@@ -70,14 +70,11 @@ jobs:
                 restore-keys: |
                   ${{ runner.os }}-bin-
 
-            - name: Build
-              run: .github/workflows/build_docs.sh
-
             - name: Setup Pages
               id: pages
               uses: actions/configure-pages@v5
             - name: Build with mdBook
-              run: mdbook build
+              run: .github/workflows/build_docs.sh
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
