@@ -32,16 +32,20 @@ ruff-check *files:
 dprint *files:
 	dprint fmt --allow-no-files {{files}}
 
+# Check formatting using dprint
+dprint-check *files:
+	dprint check --allow-no-files {{files}}
+
 # Check type hints using mypy
 mypy *files:
 	{{UV_RUN}} mypy {{files}}
 
 # Run ts+svelte checks
-ts-check *files:
+ts-check:
   {{ if path_exists("ts") == "true" { "cd ts && npm run check && npm run lint" } else { "" } }}
 
 # Check proto files for formatting issues
-proto-check *files:
+proto-check:
   {{ if path_exists("ts") == "true" { "cd ts && npm run check_proto" } else { "" } }}
 
 # Format proto files
@@ -52,7 +56,7 @@ proto-format:
 fix: ruff dprint proto-format
 
 # Run mypy+formatting+ts+proto checks
-lint: mypy ruff-check ts-check proto-check
+lint: mypy ruff-check proto-check dprint-check ts-check
 
 # Run pytest
 pytest:

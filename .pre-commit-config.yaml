@@ -16,35 +16,12 @@ repos:
           - id: detect-private-key
     - repo: local
       hooks:
-          - id: mypy
-            name: mypy
-            entry: just mypy --
+          - id: lints
+            name: lints
+            entry: just lint
             language: system
-            types: [python]
-          - id: ruff-format
-            name: ruff-format
-            entry: just ruff
-            language: system
-            types: [python]
-          - id: ruff-check
-            name: ruff-check
-            entry: just ruff-check
-            language: system
-            types: [python]
-          - id: dprint
-            name: dprint
-            entry: just dprint
-            language: system
-          - id: ts-check
-            name: ts-check
-            entry: just ts-check
-            language: system
-            types_or: [javascript, ts, svelte]
-          - id: proto-check
-            name: proto-check
-            entry: just proto-check
-            language: system
-            types: [proto]
+            pass_filenames: false
+            always_run: true
 
 ci:
     autoupdate_schedule: weekly
