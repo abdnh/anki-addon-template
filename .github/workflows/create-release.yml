@@ -13,4 +13,4 @@ jobs:
     uses: abdnh/anki-addon-actions/.github/workflows/create-release.yml@main
 
   build-docs:
-    uses: ./github/workflows/build-docs.yml
+    uses: ./.github/workflows/build-docs.yml
