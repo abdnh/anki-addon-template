@@ -16,6 +16,10 @@ zip args='':
 vendor:
 	{{UV_RUN}} python -m ankiscripts.vendor
 
+# Run protobuf generation
+proto:
+	{{UV_RUN}} python -m ankiscripts.protobuf
+
 # Format using Ruff
 ruff *files:
 	{{UV_RUN}} ruff format --force-exclude {{files}}
@@ -41,11 +45,11 @@ proto-check *files:
   {{ if path_exists("ts") == "true" { "cd ts && npm run check_proto" } else { "" } }}
 
 # Format proto files
-proto:
+proto-format:
   {{ if path_exists("ts") == "true" { "cd ts && npm run format_proto" } else { "" } }}
 
 # Fix formatting issues
-fix: ruff dprint proto
+fix: ruff dprint proto-format
 
 # Run mypy+formatting+ts+proto checks
 lint: mypy ruff-check ts-check proto-check
