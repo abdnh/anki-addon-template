@@ -8,7 +8,7 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const srcDir = path.resolve(__dirname, "src");
 
 const packageJson = JSON.parse(readFileSync(path.resolve(__dirname, "package.json"), "utf8"));
-const addonName = packageJson.name;
+const addonName = packageJson.name.split("_").map(part => part[0].toUpperCase() + part.slice(1).toLowerCase()).join("");
 
 const moduleName = process.argv[2];
 if (!moduleName) {
