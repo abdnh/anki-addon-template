@@ -70,6 +70,15 @@ ts-test:
 # Run pytest+ts tests
 test: pytest ts-test
 
+# Build mdBook docs
+build-docs:
+  {{ if path_exists("docs") == "true" { "cd docs && mdbook build" } else { "" } }}
+
+# Serve mdBook docs
+serve-docs:
+  {{ if path_exists("docs") == "true" { "cd docs && mdbook serve" } else { "" } }}
+
+
 # Package source distribution
 sourcedist:
 	{{UV_RUN}} python -m ankiscripts.sourcedist
