@@ -1,0 +1,6 @@
+{
+    "addon_name": "Add-on Template",
+    "project_slug": "addon_template",
+    "package_name": "{{ cookiecutter.project_slug }}",
+    "author": "Abdo"
+}
