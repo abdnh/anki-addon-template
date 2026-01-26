@@ -22,5 +22,5 @@ Anki add-on template for my projects.
 ## Setup
 
 - Install `ankiscripts`: `uv tool install git+https://github.com/abdnh/ankiscripts[template]`
-- Create a new folder and run the `ankiscripts.init` script to initialize the template: `uv run -m ankiscripts.init`. This runs Copier and asks you a few questions such as add-on name. It also sets up the `.vscode` folder for VS Code.
+- Create a new folder and run the following command to initialize the template: `uv run init_anki_addon`. This runs Copier and asks you a few questions such as add-on name. It also sets up the `.vscode` folder for VS Code.
 - Run the add-on using VS Code's launch configuration or manually using the command: `uv run -m ankiscripts.run -b ankidata`. This creates a symlink to the add-on's `src` folder inside the `ankidata` Anki data base folder and launches Anki.
