@@ -2,3 +2,4 @@ __pycache__/
 *.py[oc]
 *.egg-info/
 TODO.md
+test_addon/
