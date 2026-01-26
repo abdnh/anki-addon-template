@@ -14,7 +14,7 @@
 </script>
 
 <div class="m-4 p-4 card w-min-screen shadow-lg bg-slate-200">
-    {#await linksPromise}
+    {% raw %}{#await linksPromise}{% endraw %}
         <Spinner />
     {:then response}
         <main class="prose prose-2xl prose-h2:text-4xl">
