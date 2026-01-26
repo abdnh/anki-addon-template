@@ -1,5 +1,8 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @plugin "daisyui" {
-    themes: cmyk --default, dark --prefersdark;
+    themes:
+        cmyk --default,
+        dark --prefersdark;
 }
 @source "../../../node_modules/ankiutils";

@@ -26,6 +26,12 @@ export default ts.config(
                 { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
             ],
             "@typescript-eslint/no-explicit-any": "off",
+            "svelte/no-navigation-without-resolve": [
+                "error",
+                {
+                    "ignoreLinks": true,
+                },
+            ],
         },
     },
     {

@@ -9,12 +9,12 @@ from . import deckbrowser
 from .backend.server import init_server
 from .consts import consts
 from .errors import setup_error_handler, upload_logs_and_notify_user
-from .gui.hello import HelloWebDialog
+from .gui.help import HelpDialog
 from .log import logger
 
 
-def on_hello() -> None:
-    HelloWebDialog(parent=mw).show()
+def on_help() -> None:
+    HelpDialog(parent=mw).show()
 
 
 def on_upload_logs() -> None:
@@ -23,7 +23,7 @@ def on_upload_logs() -> None:
 
 def add_menu() -> None:
     menu = QMenu(consts.name, mw)
-    menu.addAction("Say hello", on_hello)
+    menu.addAction("Help", on_help)
     menu.addAction("Upload logs", on_upload_logs)
     mw.form.menuTools.addMenu(menu)
 

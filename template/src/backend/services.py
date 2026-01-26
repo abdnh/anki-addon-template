@@ -1,22 +1,13 @@
-import time
-
-from aqt import mw
-
-from ..proto.backend_pb2 import GetStatsRequest, GetStatsResponse, Stats
+from ..consts import consts
+from ..proto.backend_pb2 import GetSupportLinksResponse
+from ..proto.generic_pb2 import Empty
 from ..proto.services import BackendServiceBase
 
 
 class BackendService(BackendServiceBase):
     @classmethod
-    def get_stats(cls, request: GetStatsRequest) -> GetStatsResponse:
-        # Add delay to allow spinner to show
-        time.sleep(5)
-        graphs_response = mw.col._backend.graphs(search=f"did:{request.deck_id}", days=1)
-        reviews = graphs_response.today.answer_count
-        time_spent = graphs_response.today.answer_millis
-        return GetStatsResponse(
-            stats=Stats(
-                reviews=reviews,
-                time_spent=time_spent,
-            )
-        )
+    def get_support_links(cls, request: Empty) -> GetSupportLinksResponse:
+        github_page = consts.homepage
+        forums_page = consts.support_channels["forums"]
+        docs_page = consts.docs_page
+        return GetSupportLinksResponse(github_page=github_page, forums_page=forums_page, docs_page=docs_page)
