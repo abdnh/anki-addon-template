@@ -1,13 +1,13 @@
-<p>See <a href="https://www.abdnh.net/anki-addon-template/">docs</a> for usage.</p>
+<p>See <a href="{{ docs_page }}">docs</a> for usage.</p>
 
 <b>Changelog</b>
 
-See <a href="https://github.com/abdnh/anki-addon-template/blob/master/CHANGELOG.md">CHANGELOG.md</a> for a list of changes.
+See <a href="{{ github_page }}/blob/main/CHANGELOG.md">CHANGELOG.md</a> for a list of changes.
 
 <b>Support &amp; feature requests</b>
 
-<p>Please post any questions, bug reports, or feature requests in the <a href="https://forums.ankiweb.net/c/add-ons/11">support page</a> or the <a href="https://github.com/abdnh/anki-addon-template/issues">issue tracker</a>.</p>
-<p>If you want priority support for your feature/help request, I'm available for hire.
+<p>Please post any questions, bug reports, or feature requests in the <a href="{{ forums_page }}">support page</a> or the <a href="{{ github_page }}/issues">issue tracker</a>.</p>
+{%- if add_author_support_links %}<p>If you want priority support for your feature/help request, I'm available for hire.
 Get in touch via <a href="mailto:abdo@abdnh.net">email</a> or the UpWork link below.</p>
 
 <b>Support me</b>
@@ -18,3 +18,5 @@ Get in touch via <a href="mailto:abdo@abdnh.net">email</a> or the UpWork link be
 <a href="https://www.buymeacoffee.com/abdnh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" height="36"></a></p>
 <p>I'm also available for freelance add-on development:</p>
 <p><a href="https://www.upwork.com/freelancers/~01d764ac58a0eccc5c"><img height="36" src="https://i.imgur.com/z9lPvHb.png"></a>
+
+{%- endif %}

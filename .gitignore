@@ -1,0 +1,4 @@
+__pycache__/
+*.py[oc]
+*.egg-info/
+TODO.md
