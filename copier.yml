@@ -1,0 +1,58 @@
+_subdirectory: template
+_jinja_extensions:
+    - anki_addon_template.extensions.github_pages_from_repo
+
+project_name:
+    type: str
+    help: Add-on name
+    default: Add-on Template
+
+package_name:
+    type: str
+    help: Python package name
+    default: "{{ project_name.lower() | replace(' ', '_') | replace('-', '_') | replace('.', '_') | trim() }}"
+
+author:
+    type: str
+    help: Author name
+    default: Abdo
+
+email:
+    type: str
+    help: Support email
+    default: "{{ author.lower() | trim() | replace(' ', '-') }}@example.com"
+
+github_page:
+    type: str
+    help: GitHub page
+    default: https://github.com/abdnh/anki-addon-template
+
+forums_page:
+    type: str
+    help: Anki forums page
+    default: https://forums.ankiweb.net/c/add-ons/11
+
+docs_page:
+    type: str
+    help: Docs page
+    default: "{{ github_page | github_pages_from_repo }}"
+
+ankiweb_id:
+    type: str
+    help: AnkiWeb ID
+    default: 1
+
+min_point_version:
+    type: int
+    help: Minimum supported Anki version
+    default: 50
+
+max_point_version:
+    type: int
+    help: Maximum supported Anki version
+    default: 0
+
+add_author_support_links:
+    type: bool
+    help: Are you the author of this template? (probably no - this is used to add the author's own support links)
+    default: false

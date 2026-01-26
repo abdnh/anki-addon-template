@@ -3,8 +3,8 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "anki_addon_template"
-authors = [{ name = "Abdo", email = "abdo@abdnh.net"}]
+name = "{{ package_name }}"
+authors = [{ name = "{{ author }}", {%- if email %} email = "{{ email }}"{%- endif %} }]
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
@@ -14,24 +14,44 @@ classifiers = [
 license = "AGPL-3.0-or-later"
 dynamic = ["version"]
 dependencies = [
-    "copier>=9.10.3",
+    "ankiutils",
+    "protobuf",
 ]
+
+[tool.setuptools]
+package-dir = { "{{ package_name }}" = "src" }
+
+[tool.uv.sources]
+ankiscripts = { git = "https://github.com/abdnh/ankiscripts", branch = "master" }
+ankiutils = { git = "https://github.com/abdnh/ankiutils", branch = "master" }
 
 [dependency-groups]
 dev = [
+    "ankiscripts[forms]",
+    "ankiutils",
+    "aqt[qt]",
     "mypy>=1.15.0",
     "prek>=0.2.30",
     "pytest>=8.3.5",
     "pytest-cov>=6.1.1",
     "ruff>=0.11.7",
+    "sentry-sdk>=2.35.0",
+    "types-protobuf",
 ]
 
 [project.urls]
-Repository = "https://github.com/abdnh/anki-addon-template"
+Repository = "{{ github_page }}"
 
 [tool.ruff]
 extend-exclude = [
-    "template",
+    ".venv",
+    "ankidata",
+    "vendor",
+    "forms",
+    "user_files",
+    "build",
+    "node_modules",
+    "proto",
 ]
 line-length = 120
 
@@ -42,6 +62,9 @@ ignore = ["PLW0603", "PLR2004"]
 [tool.pytest.ini_options]
 addopts = "--cov=src --cov-branch"
 testpaths = ["tests"]
+
+[tool.coverage.run]
+omit = ["src/forms/*", "src/vendor/*"]
 
 [tool.mypy]
 pretty = true
@@ -54,3 +77,15 @@ warn_unused_ignores = true
 check_untyped_defs = true
 disallow_untyped_defs = true
 strict_equality = true
+exclude = ["vendor", "user_files"]
+modules = ["src", "tests"]
+
+[[tool.mypy.overrides]]
+module = "src.forms.*"
+ignore_errors = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "src.vendor.*"
+ignore_missing_imports = true
+ignore_errors = true
