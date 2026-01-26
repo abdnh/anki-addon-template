@@ -1,6 +1,9 @@
 _subdirectory: template
 _jinja_extensions:
     - anki_addon_template.extensions.github_pages_from_repo
+_tasks:
+    - command: "rm -rf ts/static"
+      when: "{{ add_author_support_links == False }}"
 
 project_name:
     type: str
