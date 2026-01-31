@@ -5,7 +5,6 @@ patch_certifi()
 # ruff: noqa: E402
 from aqt import QMenu, mw
 
-from . import deckbrowser
 from .backend.server import init_server
 from .consts import consts
 from .errors import setup_error_handler, upload_logs_and_notify_user
@@ -31,5 +30,4 @@ def add_menu() -> None:
 def init() -> None:
     setup_error_handler(lambda: logger.info("Hello world!", addon=consts.name))
     add_menu()
-    deckbrowser.init_hooks()
     init_server()
