@@ -1,8 +1,10 @@
 {
     "properties": {
+        {%- if enable_sentry_integration %}
         "report_errors": {
             "type": "boolean"
         }
+        {%- endif %}
     },
     "type": "object"
 }

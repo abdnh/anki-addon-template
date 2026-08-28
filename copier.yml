@@ -55,6 +55,11 @@ max_point_version:
     help: Maximum supported Anki version
     default: 0
 
+enable_sentry_integration:
+    type: bool
+    help: Enable Sentry integration?
+    default: false
+
 add_author_support_links:
     type: bool
     help: Are you the author of this template? (probably no - this is used to add the author's own support links)

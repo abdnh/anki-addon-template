@@ -1,8 +1,3 @@
-from .patches import patch_certifi
-
-patch_certifi()
-
-# ruff: noqa: E402
 from aqt import QMenu, mw
 
 from .backend.server import init_server
