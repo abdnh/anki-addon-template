@@ -1,7 +1,7 @@
 {
     "recommendations": [
         "ms-python.python",
-        "matangover.mypy",
+        "ms-python.mypy-type-checker",
         "charliermarsh.ruff",
         "dprint.dprint",
         "DrBlury.protobuf-vsc",

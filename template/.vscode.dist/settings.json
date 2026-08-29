@@ -14,5 +14,9 @@
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
     },
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "mypy-type-checker.importStrategy": "fromEnvironment",
+    "mypy-type-checker.preferDaemon": true,
+    "mypy-type-checker.reportingScope": "custom",
+    "mypy-type-checker.args": ["--config-file=${workspaceFolder}/pyproject.toml"]
 }
