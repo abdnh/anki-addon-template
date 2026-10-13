@@ -48,7 +48,7 @@ ankiweb_id:
 min_point_version:
     type: int
     help: Minimum supported Anki version
-    default: 50
+    default: 260500
 
 max_point_version:
     type: int
